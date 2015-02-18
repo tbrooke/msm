@@ -1,9 +1,9 @@
 ---
-url: https://lesbonneschoses.prismic.io/api
+url: https://mainstmission.prismic.io/api
 # If specified this token is used for all "guest" requests
-# token: ""
+token: "MC5VMDNzWFFFQUFDc0E1QWxu.Mu-_ve-_ve-_vRPvv71L77-977-9Lxzvv73vv73vv73vv71OLiUSEz4z77-9D--_vUrvv73vv73vv73vv70Y77-9"
 # OAuth2 configuration
-# client_id: ""
-# client_secret: ""
+client_id: "U03sXQEAAC8A5Alm"
+client_secret: "24bbdc857cc463e0ec2fb75a85accd67"
 
 # This file can contain ERB; for instance: client_id: <%= ENV['CLIENT_ID'] %>
