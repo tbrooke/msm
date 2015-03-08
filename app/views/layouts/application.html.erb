@@ -11,10 +11,12 @@
 <header>
 
   <%= render 'partials/nav' %>
+</header>
+
+<main>
   <a href="/">
     <h1>Main Street Mission</h1>
   </a>
-</header>
 
 <%= yield %>
 
@@ -22,6 +24,6 @@
 <script src="//static.cdn.prismic.io/prismic.min.js"></script>
 <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag %>
 <% render 'partials/experiments', :google_id => @google_id %>
-
+</main>
 </body>
 </html>
