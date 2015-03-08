@@ -11,9 +11,16 @@
  *= require_self
 @import 'bourbon';
 @import 'base/grid-settings';
-@import 'neat';
+@import 'neat/neat';
 @import 'base/base';
+@import '_clearfix'
+@import '_background'
+@import '_grid';
+@import '_media';
+@import '_button';
 @import 'nav';
 @import 'msm';
+@import 'hero';
+
  *= require_tree .
  */
