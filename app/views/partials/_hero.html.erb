@@ -2,6 +2,23 @@
   <div class="hero-inner">
     <div class="hero-copy" >
       <article class="type-system-geometric">
+
+<%# <% if @document['heading.main_image'] %>
+   <div id="main-image">
+     <style type="text/css">
+        @media (min-width: 993px) {
+          #main-image { background-image: url('<%= @document['heading.main'].get_image('large').url %>') }
+        }
+        @media (max-width: 992px) and (min-width: 768px) {
+          #main-image { background-image: url('<%= @document['heading.main'].get_image('medium').url %>') }
+        }
+        @media (max-width: 767px) {
+          #main-image { background-image: url('<%= @document['heading.main'].get_image('small').url %>') }
+        }
+     </style>
+   </div>
+<%#  <% end %>
+
         <h1>Main Street Mission</h1>
         <p>A Community of Neighbors Helping Neighbors,</p>
         <p>by Sharing God's Love</p>

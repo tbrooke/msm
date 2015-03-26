@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   # Homepage action: querying the "everything" form (all the documents, paginated by 20)
   def index
+    @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")

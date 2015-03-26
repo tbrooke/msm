@@ -5,7 +5,23 @@
 <!--<hr />-->
 <%= render 'partials/hero' %>
 
-<ul class="bullets">
+<% if @document['homepage.main_image'] %>
+   <div id="main-image">
+     <style type="text/css">
+        @media (min-width: 993px) {
+          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>') }
+        }
+        @media (max-width: 992px) and (min-width: 768px) {
+          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('medium').url %>') }
+        }
+        @media (max-width: 767px) {
+          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('small').url %>') }
+        }
+     </style>
+   </div>
+ <% end %>
+
+  <ul class="bullets">
   <li class="bullet three-col-bullet">
     <div class="bullet-icon bullet-icon-1">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2.png
