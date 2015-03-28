@@ -5,17 +5,17 @@
         <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
         <nav role="navigation">
             <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-                <li class="nav-link"><a href="javascript:void(0)">Community</a></li>
-                <li class="nav-link"><a href="javascript:void(0)">Helping</a></li>
-                <li class="nav-link"><a href="javascript:void(0)">News</a></li>
+                <li class="nav-link"><%= link_to "Community", '/community' %></li>
+                <li class="nav-link"><%= link_to "Helping", '/helping'  %></li>
+                <li class="nav-link"><%= link_to "News", '/news' %></li>
                 <li class="nav-link logo">
                     <a href="/" class="logo">
                         <%= image_tag("msmcolor.png") %>
                     </a>
                 </li>
-                <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-                <li class="nav-link"><a href="javascript:void(0)">Donate</a></li>
-                <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
+                <li class="nav-link"><%= link_to "About Us", '/about' %></li>
+                <li class="nav-link"><%= link_to "Donate", '/donate' %></li>
+                <li class="nav-link"><%= link_to "Contact", '/contact' %></li>
             </ul>
         </nav>
     </div>

@@ -67,4 +67,10 @@ StarterRubyRails::Application.routes.draw do
   # # Previews
   get '/preview', to: 'application#preview', as: :preview
 
+  # # Community
+
+  get '/community', to: 'application#community', as: :community
+
+  ##
+
 end
