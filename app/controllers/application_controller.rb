@@ -18,13 +18,15 @@ class ApplicationController < ActionController::Base
   end
 
   def community
-    @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
+    @document = PrismicService.get_document(api.bookmark("community"), api, ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")
                      .page_size(params[:page_size] ? params[:page_size] : "20")
                      .submit(ref)
   end
+
+
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document
     id = params[:id]
