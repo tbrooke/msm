@@ -12,8 +12,13 @@ gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
 
+#  Add Cells
+#
+gem 'cells', :git => 'https://github.com/apotonick/cells.git'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
