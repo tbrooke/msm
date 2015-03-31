@@ -26,6 +26,8 @@ class ApplicationController < ActionController::Base
                      .submit(ref)
   end
 
+  def contact
+  end
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document

@@ -71,6 +71,8 @@ StarterRubyRails::Application.routes.draw do
 
   get '/community', to: 'application#community', as: :community
 
-  ##
+  ## Contact
+  
+  get '/contact', to: 'application#contact', as: :contact
 
 end
