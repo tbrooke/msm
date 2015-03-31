@@ -13,7 +13,6 @@ gem 'neat'
 gem 'font-awesome-sass'
 
 #  Add Cells
-#
 gem 'cells', :git => 'https://github.com/apotonick/cells.git'
 
 # Use Uglifier as compressor for JavaScript assets
