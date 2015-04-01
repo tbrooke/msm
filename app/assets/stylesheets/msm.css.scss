@@ -11,6 +11,14 @@ main {
 }
 
 
+.main-body {
+  margin: 20px;
+  h1,h2,h3 {
+    text-align: center;
+  }
+}
+
+
 article.type-system-geometric {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;

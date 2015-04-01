@@ -29,6 +29,15 @@ class ApplicationController < ActionController::Base
   def contact
   end
 
+  def about
+    @document = PrismicService.get_document(api.bookmark("about"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
   def document
     id = params[:id]

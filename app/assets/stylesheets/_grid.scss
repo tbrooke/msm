@@ -58,6 +58,7 @@ $default-layout-direction: LTR !default;
     padding: 2em;
     width: 100%;
 
+    @include grid-item-columns($grid-item-columns);
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
@@ -90,6 +91,7 @@ $default-layout-direction: LTR !default;
   }
 
   .grid-item-big {
+    @include grid-item-columns($grid-item-big-columns);
     @include media($large-screen) {
       @include grid-item-columns($grid-item-big-columns);
     }

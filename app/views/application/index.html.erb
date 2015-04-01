@@ -28,7 +28,7 @@
     </div>
     <div class="bullet-content">
       <h2>Volunteers</h2>
-      <p>Ou Volunteers form the core of our organization.</p>
+      <p>Our Volunteers form the core of our organization. If you want to become a volunteer please contact the Mission</p>
     </div>
   </li>
   <li class="bullet three-col-bullet">
@@ -37,7 +37,8 @@
     </div>
     <div class="bullet-content">
       <h2>Bridges</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum.</p>
+      <p>Main Street Mission is reaching out to build bridges in our community. We believe that we can help bring our community
+      together so that those in times of crisis or insecurity can know that we are united in working together</p>
     </div>
   </li>
   <li class="bullet three-col-bullet">
@@ -46,7 +47,8 @@
     </div>
     <div class="bullet-content">
       <h2>Neighbors</h2>
-      <p>Lorem ipsum sit amet consectetur adipisicing elit. Doloremque, minus, blanditiis, voluptatibus nulla quia ipsam sequi quos iusto aliquam iste magnam accusamus molestias quo illum impedit. Odit officia autem.</p>
+      <p>We are all neighbors and at Main Street Mission we believe that by joining together neighbors can help neighbors
+      and that together we can build a stronger community</p>
     </div>
   </li>
 </ul>
@@ -55,78 +57,32 @@
 
 
 <div class="grid-items-lines">
-  <a href="javascript:void(0)" class="grid-item">
+  <a href="javascript:void(0)" class="grid-item grid-item-big">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
     <h1>Getting Ahead Class</h1>
     <p>The Getting Ahead Class is starting. Monday nights.</p>
   </a>
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
-    <h1>Bridge Out of Poverty</h1>
-    <p>Lorem ipsum consectetur dolor sit amet, consectetur adipisicing elit.</p>
+    <h1>Bridges Out of Poverty</h1>
+    <p>Classes start again soon!</p>
   </a>
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
     <h1>Food Needed at the Mission</h1>
-    <p>Lorem ipsum dolor sit amet, elit.</p>
+    <p>We alway need Food at the Mission.</p>
   </a>
   <a href="javascript:void(0)" class="grid-item">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1>Grid Item</h1>
-    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
+    <h1>Volunteers Needed</h1>
+    <p>We need volunteers to go to Second Harvest.</p>
   </a>
   <a href="javascript:void(0)" class="grid-item grid-item-big">
     <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1>Wider Grid Item</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, illum.</p>
+    <h1>Gala Event</h1>
+    <p>A Glorious Unfolding!</p>
   </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
-    <h1>A Grid Item</h1>
-    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-  </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
-    <h1>Item</h1>
-    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-  </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1>Last Grid Item</h1>
-    <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p>
-  </a>
-  <div class="right-cover"></div>
-  <div class="bottom-cover"></div>
 </div>
 
 
 
-<h2>
-  <%=
-    case @documents.total_results_size
-    when 0
-      "No document found"
-    when 1
-      "One document found"
-    else
-      "#{@documents.total_results_size} documents found"
-    end
-  %>
-</h2>
-
-<ul>
-  <% @documents.each do |doc| %>
-    <li>
-      <%= link_to doc.slug, link_resolver().link_to(doc) %>
-      <%#
-        We could have written document_path(id: doc.id, slug: doc.slug, ref: maybe_ref);
-        but it's better to use the link_resolver, as it allows you to maintain in one place
-        the way all the documents' URLs are supposed to be written, whatever their types.
-      %>
-    </li>
-  <% end %>
-</ul>
-
-<hr>
-
-<%= paginate @documents %>

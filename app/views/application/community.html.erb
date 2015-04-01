@@ -1,9 +1,6 @@
-<div class="page-title">
-        <%= @document['article.title'] ? @document['article.title'].as_html_safe : '' %>
-        <%= @document['article.explicittitle'] ? @document['article.explicittitle'].as_html_safe : '' %>
-</div>
-
-<div class="short-lede">
-   <%= @document['article.shortlede'] ? @document['article.shortlede'].as_html_safe : '' %>
-</div>
+<article class="type-system-geometric">
+  <div class="main-body">
+    <%= @document.as_html_safe(link_resolver()) %>
+  </div>
+</article>
 

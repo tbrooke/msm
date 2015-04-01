@@ -75,4 +75,7 @@ StarterRubyRails::Application.routes.draw do
   
   get '/contact', to: 'application#contact', as: :contact
 
+  ## About
+  get '/about', to: 'application#about', as: :about
+
 end
