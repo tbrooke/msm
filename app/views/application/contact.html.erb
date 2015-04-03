@@ -1,8 +1,42 @@
+<article class="type-system-geometric">
 <script src="//cdnjs.cloudflare.com/ajax/libs/polymer/0.0.20130816/polymer.min.js"></script>
 
-<div id='contact_intro'>
 
-<polymer-element name="google-map" attributes="latitude longitude zoom showCenterMarker">
+
+<div id='contact_intro' class="main-body">
+<h1>Contact Us</h1>
+<h2>We would love to hear from you</h2>
+<h3>Give us a call at (704) 855-2909</h3>
+<h3>Please complete the form below and click the Submit button at the bottom.</h3>
+<h3>We&#8217;ll reply as soon as possible.</h3>
+</div>
+
+<div id="contact-form" class="form-inputs">
+  <fieldset>
+    <form accept-charset="UTF-8" class="form-input" action="https://formkeep.com/f/4ae1770fecf4" method="POST">
+      <input type="hidden" name="utf8" value="✓">
+      <input type="email" name="email" placeholder="Your Email">
+      <input type="text" name="name" placeholder="Your Name">
+      <textarea name="comment" placeholder="Enter comments here ..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </fieldset>
+</div>
+
+<div id="map_intro">
+  <hr />
+  <h1>Stop by the Mission</h1>
+  <h3>Mission Hours</h3>
+  <h4>
+    <ul>
+      <li>Monday 1:30 to 4:30 </li>
+      <li>Tuesday 8:30 to 11:30</li>
+      <li>Thursday 8:30 to 11:30</li>
+      <li>Friday 1:30 to 4:30</li>
+    </ul> </h4>
+</div>
+
+  <polymer-element name="google-map" attributes="latitude longitude zoom showCenterMarker">
 <script>
    Polymer('google-map', {
      latitude: '-34.397',
@@ -59,55 +93,8 @@
  </script>
  </polymer-element>
 
-
-
    <google-maps></google-maps>
-     <h1>Contact Us</h1>
-     <h2>We would love to hear from you</h2>
-      <h3>Give us a call at (704) 855-2909</h3>
-       <h3>Stop by the Mission</h3>
-<iframe width='500' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/tbrooke.map-xse0zknl.html#16/35.56902770480959/-80.58153033256531'></iframe>
+<iframe width='800' height='300' frameBorder='0' src='http://a.tiles.mapbox.com/v3/tbrooke.map-xse0zknl.html#16/35.56902770480959/-80.58153033256531'></iframe>
    <p></p>
-   <h4>Mission Hours</h4>
-   <h4>
-     <ul>
-         <li>Monday 1:30 to 4:30 </li>
-         <li>Tuesday 8:30 to 11:30</li>
-         <li>Thursday 8:30 to 11:30</li>
-         <li>Friday 1:30 to 4:30</li>
-      </ul> </h4>
-   <h3>Please complete the form below and click the Submit button at the bottom.</h3>
-   <h3>We&#8217;ll reply as soon as possible.</h3>
-</div>
 
-<div id='contact_pod_error' class='sysmsg'><w:sysmsg /></div>
-<div id='contact_pod_form' class="box-s1">
- <form autocomplete="off"  id='contact_form' action='/contact_pods/send_message' method='post' >
-   <p><label>NAME</label>
-     <input type='text' id='contact_firstname' class='initial_focus' name='contact[firstname]' placeholder='First Name' />
-     <input type='text' id='contact_lastname' name='contact[lastname]' placeholder='Last Name' />
-   </p>
-   <p><label>EMAIL</label>
-     <input type='text' id='contact_email' class='required' name='contact[email]' />
-   </p>
-   <p id='email2'><label>EMAIL</label>
-      <input type='text' id='contact_email2' name='contact[email2]' />
-   </p>
-   <p class="alt"><label>SUBJECT</label>
-      <input type='text' id='contact_subject' name='contact[subject]' />
-   </p>
-   <p><label>MESSAGE</label>
-     <textarea id='contact_message' rows='8' cols='80'  class='required' name='contact[message]'></textarea>
-   </p>
-   <p class="alt">
-     <input type='hidden' id='contact_ajax' name='contact[ajax]' value='json' />
-     <input name='submit' id='submit_button' type='submit' src='/images/button-submit.gif' alt="Send Your Message" />
-   </p>
- </form>
-</div>
-
-
-
-
-
-
+</article>

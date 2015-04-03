@@ -1,4 +1,6 @@
 class FeatureCell < Cell::ViewModel
+
+
   def show
     render
   end
@@ -6,6 +8,9 @@ class FeatureCell < Cell::ViewModel
 
   private
 
-
+  def body
+    @feature
+  end
 
 end
+
