@@ -1,24 +1,35 @@
-@import '_clearfix';
-@import '_media';
 
 $max-width: em(860);
 body {
-  margin: 0;
+  margin: 0px;
 }
 
 main {
   margin: 0px;
 }
 
-
+iframe {
+  margin-top: 20px;
+  margin-left: 200px;
+  margin-bottom: 0;
+}
 .main-body {
   margin: 20px;
   h1,h2,h3 {
     text-align: center;
   }
 }
+fieldset {
+  width: 600px;
+  margin: 10px auto;
+}
 
-
+#map_intro {
+  h1 {
+    text-align: center;
+  }
+  margin-left: 20px;
+}
 article.type-system-geometric {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;

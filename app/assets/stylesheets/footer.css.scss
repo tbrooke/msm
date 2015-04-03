@@ -25,19 +25,13 @@
 // }
 
 
-@import '_background';
-@import '_outer-container';
-@import '_clearfix';
-@import '_media';
-@import '_button';
-@import '_grid';
-
 .footer-2 {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-spacing: 1.5em !default;
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
+
 
   ul {
     margin: 0;
@@ -66,19 +60,25 @@
   display: inline-block;
 
   .footer-logo {
-    margin-right: 1em;
-    margin-bottom: 1em;
-    margin-top: -1em;
-    width: 250px;
+    margin: 0 auto;
+    //padding-left: 12em;
+    text-align: center;
+    paddin-left: 1em;
+    width: 450px;
 
     @include media($large-screen) {
       float: left;
+      margin-top: 25 px;
       margin-bottom: 0;
     }
   }
 
   .footer-logo img {
-    height: 4em;
+    height: 6.5em;
+    margin: 0;
+    padding-left: 1.5em;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   ul {
@@ -112,8 +112,9 @@
 
   .footer-secondary-links {
     @include media($large-screen) {
-      text-align: left;
-      padding-right: 6em;
+      text-align: right;
+      padding-left: 3em;
+      padding-right: 2em;
     }
 
     li {
@@ -122,11 +123,11 @@
     }
 
     ul.footer-social {
-      margin-top: 0;
 
       @include media($large-screen) {
         float: right;
-        margin-top: 0;
+        margin-top: 20px;
+        margin-right: 0;
       }
 
       li {
