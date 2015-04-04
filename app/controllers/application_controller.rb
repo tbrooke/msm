@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
                     .submit(ref)
   end
 
+  def feature
+  end
+
   def community
     @document = PrismicService.get_document(api.bookmark("community"), api, ref)
     @google_id = api.experiments.current

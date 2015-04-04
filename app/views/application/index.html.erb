@@ -27,7 +27,8 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
     </div>
     <div class="bullet-content">
-       <%= cell(:feature, @feature_cell).call %>
+       <%= @feature.as_html_safe(link_resolver()) %>
+           <%= cell(:feature, feature).call %>
     </div>
   </li>
   <li class="bullet three-col-bullet">

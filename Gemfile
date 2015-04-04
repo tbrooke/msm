@@ -12,8 +12,10 @@ gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
 
-#  Add Cells
+#  Add Cells and Roar-rails
 gem 'cells', :git => 'https://github.com/apotonick/cells.git'
+gem 'roar-rails'
+gem 'responders'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

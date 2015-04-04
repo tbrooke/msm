@@ -1,5 +1,6 @@
 class FeatureCell < Cell::ViewModel
-
+  include PrismicHelper
+  include PrismicController
 
   def show
     render
@@ -9,7 +10,9 @@ class FeatureCell < Cell::ViewModel
   private
 
   def body
-    @feature
+
+    self = PrismicService.get_document(api.bookmark("feature"), api, ref)
+
   end
 
 end
