@@ -28,7 +28,7 @@
     </div>
     <div class="bullet-content">
        <%= @feature.as_html_safe(link_resolver()) %>
-           <%= cell(:feature, feature).call %>
+           <%= cell(:feature, @feature).call %>
     </div>
   </li>
   <li class="bullet three-col-bullet">

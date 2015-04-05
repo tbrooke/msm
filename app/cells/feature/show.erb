@@ -3,5 +3,7 @@
 </h2>
 
 <p>
-  <%= @feature %>
+
+
+  <%= @feature.as_html_safe(link_resolver()) %>
 </p>
