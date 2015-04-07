@@ -35,16 +35,17 @@ $max-width: em(860);
   .hero-inner {
     @include outer-container;
     @include clearfix;
+    max-width: 70em;
 
     $grid-columns: 12 !default; // Total number of columns in the grid
 
     color: $hero-color;
     margin: auto;
-    padding: 3.5em;
+    padding-top: 3.5em;
     text-align: center;
 
     .hero-copy {
-      text-align: center;
+      text-align: left;
       margin: 0;
 
       h1 {

@@ -1,8 +1,3 @@
-<!--<form action="/search" method="GET">-->
-  <!--<input type="text" name="q" value="">-->
-  <!--<input type="submit" value="Search">-->
-<!--</form>-->
-<!--<hr />-->
 <%= render 'partials/hero' %>
 
 <% if @document['homepage.main_image'] %>
@@ -22,36 +17,10 @@
  <% end %>
 
   <ul class="bullets">
-  <li class="bullet three-col-bullet">
-    <div class="bullet-icon bullet-icon-1">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
-    </div>
-    <div class="bullet-content">
-       <%= @feature.as_html_safe(link_resolver()) %>
-           <%= cell(:feature, @feature).call %>
-    </div>
-  </li>
-  <li class="bullet three-col-bullet">
-    <div class="bullet-icon bullet-icon-2">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
-    </div>
-    <div class="bullet-content">
-      <h2>Bridges</h2>
-      <p>Main Street Mission is reaching out to build bridges in our community. We believe that we can help bring our community
-      together so that those in times of crisis or insecurity can know that we are united in working together</p>
-    </div>
-  </li>
-  <li class="bullet three-col-bullet">
-    <div class="bullet-icon bullet-icon-3">
-      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
-    </div>
-    <div class="bullet-content">
-      <h2>Neighbors</h2>
-      <p>We are all neighbors and at Main Street Mission we believe that by joining together neighbors can help neighbors
-      and that together we can build a stronger community</p>
-    </div>
-  </li>
-</ul>
+      <% @features.each do |feature| %>
+       <%= cell(:feature, feature).call %>
+     <% end %>
+ </ul>
 
 
 
@@ -77,11 +46,6 @@
     <h1>Volunteers Needed</h1>
     <p>We need volunteers to go to Second Harvest.</p>
   </a>
-  <!--<a href="javascript:void(0)" class="grid-item grid-item-big">-->
-    <!--<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">-->
-    <!--<h1>Gala Event</h1>-->
-    <!--<p>A Glorious Unfolding!</p>-->
-  <!--</a>-->
 </div>
 
 

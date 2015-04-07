@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   # Homepage action: querying the "everything" form (all the documents, paginated by 20)
   def index
     @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
-    @feature =  PrismicService.get_document(api.bookmark("feature"), api, ref)
+    @features =  api.form("features")
+                    .orderings("[my.feature.position]")
+                    .submit(ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")
@@ -18,8 +20,6 @@ class ApplicationController < ActionController::Base
                     .submit(ref)
   end
 
-  def feature
-  end
 
   def community
     @document = PrismicService.get_document(api.bookmark("community"), api, ref)
