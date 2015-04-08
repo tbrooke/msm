@@ -1,7 +1,11 @@
-<article id="<%= @document.id %>" type=" ">
+<!-- <article id="<%= @document.id %>" type=" "> -->
 	<%#
 		as_html_safe is a monkey-patch in your prismicio_custom.rb, just because it's faster than typing
 		@document.as_html(link_resolver(maybe_ref)).html_safe
 	%>
+  
+<article class="type-system-geometric">
+<div class="main-body">
 	<%= @document.as_html_safe(link_resolver()) %>
+</div>
 </article>

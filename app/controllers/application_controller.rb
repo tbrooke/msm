@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
+    @articles = api.form("articles")
+                    .orderings("[my.article.position]")
+                    .submit(ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")

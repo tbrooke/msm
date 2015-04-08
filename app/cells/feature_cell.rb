@@ -13,6 +13,10 @@ class FeatureCell < Cell::ViewModel
     model['feature.title'].as_html_safe(link_resolver())
   end
 
+  def link
+  link_to title, link_resolver().link_to(model) 
+  end
+
   def lede
     model['feature.longlede'].as_html_safe(link_resolver())
   end
