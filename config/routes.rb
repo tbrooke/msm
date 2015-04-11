@@ -78,4 +78,23 @@ StarterRubyRails::Application.routes.draw do
   ## About
   get '/about', to: 'application#about', as: :about
 
+  ## news
+  get '/news', to: 'application#news', as: :news
+
+  ## donate
+
+  get '/donate', to: 'application#donate', as: :donate
+
+  ## helping
+
+  get '/helping', to: 'application#helping', as: :helping
+
+  ## need
+
+  get '/need', to: 'application#need', as: :need
+
+  ## volunteer
+
+  get '/volunteer', to: 'application#volunteer', as: :volunteer
+
 end

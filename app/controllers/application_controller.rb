@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
                     .orderings("[my.feature.position]")
                     .submit(ref)
     @articles = api.form("articles")
+                    .query(%([[:d = at(document.tags, ["homepage"])]]))
                     .orderings("[my.article.position]")
                     .submit(ref)
     @google_id = api.experiments.current
@@ -26,6 +27,51 @@ class ApplicationController < ActionController::Base
 
   def community
     @document = PrismicService.get_document(api.bookmark("community"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
+  def donate
+    @document = PrismicService.get_document(api.bookmark("donate"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
+  def need
+    @document = PrismicService.get_document(api.bookmark("need"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
+  def news
+    @document = PrismicService.get_document(api.bookmark("news"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
+  def volunteer
+    @document = PrismicService.get_document(api.bookmark("volunteer"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
+
+  def helping
+    @document = PrismicService.get_document(api.bookmark("helping"), api, ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")

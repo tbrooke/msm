@@ -6,17 +6,27 @@ class ArticleCell < Cell::ViewModel
     render
   end
 
+
   private
 
   def title
     model['article.title'].as_html_safe(link_resolver())
   end
 
-  def link
-  link_to title, link_resolver().link_to(model) 
+  def image
+    model['article.main_image']
   end
 
-  def lede
-    model['article.longlede'].as_html_safe(link_resolver())
+  def link
+    link_to title, link_resolver().link_to(model) 
   end
+
+   def lede
+     if model['article.longlede']
+     model['article.longlede'].as_html_safe(link_resolver())
+     end
+   end
+  
+
+  
 end

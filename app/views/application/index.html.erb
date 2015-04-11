@@ -1,52 +1,55 @@
 <%= render 'partials/hero' %>
 
 <% if @document['homepage.main_image'] %>
-   <div id="main-image">
-     <style type="text/css">
-        @media (min-width: 993px) {
-          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>') }
-        }
-        @media (max-width: 992px) and (min-width: 768px) {
-          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('medium').url %>') }
-        }
-        @media (max-width: 767px) {
-          #main-image { background-image: url('<%= @document['homepage.main_image'].get_view('small').url %>') }
-        }
-     </style>
-   </div>
- <% end %>
+    <div id="main-image">
+      <style type="text/css">
+          @media (min-width: 993px) {
+              #main-image {
+                  background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>')
+              }
+          }
 
-  <ul class="bullets">
-      <% @features.each do |feature| %>
-       <%= cell(:feature, feature).call %>
-     <% end %>
- </ul>
+          @media (max-width: 992px) and (min-width: 768px) {
+              #main-image {
+                  background-image: url('<%= @document['homepage.main_image'].get_view('medium').url %>')
+              }
+          }
 
+          @media (max-width: 767px) {
+              #main-image {
+                  background-image: url('<%= @document['homepage.main_image'].get_view('small').url %>')
+              }
+          }
+      </style>
+    </div>
+<% end %>
 
+<ul class="bullets">
+  <% @features.each do |feature| %>
+      <%= cell(:feature, feature).call %>
+  <% end %>
+</ul>
+<hr>
 
+<div class="scroll-on-page">
+  <aside id="scroll-on-page-top">
+    <% @articles.each do |article| %>
+        <% if cell(:article, article) %>
+            <a class="scroll-on-page-link" href="#scroll-link-1">First Link</a>
+        <% end %>
+    <% end %>
+  </aside>
 
-<div class="grid-items-lines">
-  <a href="javascript:void(0)" class="grid-item grid-item-big">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png" alt="">
-    <h1>Getting Ahead Class</h1>
-    <p>The Getting Ahead Class is starting. Monday nights.</p>
-  </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_3_dark.png" alt="">
-    <h1>Bridges Out of Poverty</h1>
-    <p>Classes start again soon!</p>
-  </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1>Food Needed at the Mission</h1>
-    <p>We alway need Food at the Mission.</p>
-  </a>
-  <a href="javascript:void(0)" class="grid-item">
-    <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_2_dark.png" alt="">
-    <h1>Volunteers Needed</h1>
-    <p>We need volunteers to go to Second Harvest.</p>
-  </a>
+  <article>
+    <% @articles.each do |article| %>
+        <% if cell(:article, article) %>
+            <section>
+              <h4 id="scroll-link-1">First Target</h4>
+              <%= cell(:article, article).call %>
+            </section>
+        <% end %>
+    <% end %>
+    <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
+  </article>
 </div>
-
-
 
