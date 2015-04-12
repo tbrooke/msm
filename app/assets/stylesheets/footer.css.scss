@@ -31,7 +31,7 @@
   $base-accent-color: #477DCA !default;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-
+  font-family: "Sanchez", serif;
 
   ul {
     margin: 0;
@@ -82,6 +82,7 @@
   }
 
   ul {
+
     font-size: 1.25em;
 
     @include media($large-screen) {

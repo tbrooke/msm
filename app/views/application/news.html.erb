@@ -1,5 +1,11 @@
 <article class="type-system-geometric">
   <div class="main-body">
-    <%= @document.as_html_safe(link_resolver()) %>
+    <% @articles.each do |article| %>
+        <% if cell(:article, article) %>
+            <section>
+              <%= cell(:article, article).call %>
+            </section>
+        <% end %>
+    <% end %>
   </div>
 </article>

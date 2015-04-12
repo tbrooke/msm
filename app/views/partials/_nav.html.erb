@@ -3,7 +3,8 @@
         <a href="javascript:void(0)" class="mobile-logo"/a>
        <%= image_tag("msmcolor.png") %>
         <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-        <nav role="navigation">
+        <nav role="navigation type-system-geometric">
+          <article class="type-system-geometric">
             <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
                 <li class="nav-link"><%= link_to "Community", '/community' %></li>
                 <li class="nav-link"><%= link_to "Helping", '/helping'  %></li>
@@ -17,6 +18,7 @@
                 <li class="nav-link"><%= link_to "Donate", '/donate' %></li>
                 <li class="nav-link"><%= link_to "Contact", '/contact' %></li>
             </ul>
+              </article>
         </nav>
     </div>
 </header>

@@ -13,10 +13,9 @@ class ApplicationController < ActionController::Base
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
-    @articles = api.form("articles")
-                    .query(%([[:d = at(document.tags, ["homepage"])]]))
-                    .orderings("[my.article.position]")
-                    .submit(ref)
+    @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
+    @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
+    @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")
@@ -53,8 +52,11 @@ class ApplicationController < ActionController::Base
   end
 
   def news
-    @document = PrismicService.get_document(api.bookmark("news"), api, ref)
     @google_id = api.experiments.current
+    @articles = api.form("articles")
+                    .query(%([[:d = at(document.tags, ["news"])]]))
+                    .orderings("[my.article.position]")
+                    .submit(ref)
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")
                      .page_size(params[:page_size] ? params[:page_size] : "20")
@@ -81,6 +83,7 @@ class ApplicationController < ActionController::Base
 
   def contact
   end
+
 
   def about
     @document = PrismicService.get_document(api.bookmark("about"), api, ref)
