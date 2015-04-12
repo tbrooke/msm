@@ -5,6 +5,53 @@ body {
   margin: 0px;
 }
 
+
+#giving {position:relative;
+  padding-top: 113px;
+  padding-left: 0px;
+  margin: 25px 25px 25px 410px;
+  float:none;
+  background-color:"rgba(255, 255, 153)";
+  background-image: url("HelpingHands_Logo.png");
+  background-repeat: no-repeat;
+  width:395px;
+  height: 345px;
+  border: 3px solid #A68B4F;
+  box-shadow: 5px 4px 4px hsla(0,0%,0%,.3);
+  line-height: 1.2em;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px #4E92A3;
+
+}
+
+
+#giving-text {
+  margin-left: 335px;
+}
+
+#getting-text {
+  margin-top: 120px;
+  margin-left: 20px;
+}
+
+
+
+#getting {position:relative;
+  float:right;
+  padding: 10px;
+  margin: 10px;
+  background-color:"rgba(255, 255, 153)";
+  width:275px;
+  height:275px;
+
+}
+
+
+
+
+
 main {
   font-family: "Sanchez", serif;
   margin: 0px;

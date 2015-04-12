@@ -54,16 +54,15 @@
             },
             resize: function() {
                 google.maps.event.trigger(this.map, 'resize');
-                this.updateCenter();
+               this.updateCenter();
             },
             latitudeChanged: function() {
                 this.asyncUpdateCenter();
             },
             longitudeChanged: function() {
                 this.asyncUpdateCenter();
-            },
-            zoomChanged: function() {
-                this.map.setZoom(this.zoom);
+            }, zoomChanged: function() {
+              this.map.setZoom(this.zoom);
             },
             showCenterMarkerChanged: function() {
                 if (this.centerMarker) {
@@ -95,11 +94,6 @@
   <google-maps></google-maps>
   <iframe width='1200' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/tbrooke.map-xse0zknl.html#16/35.56902770480959/-80.58153033256531'></iframe>
   <p></p>
-
-
-
-
-
 
 
 
