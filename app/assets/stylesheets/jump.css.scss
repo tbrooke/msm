@@ -6,13 +6,14 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-
+  font-family: "Sanchez", serif;
   margin: 10px;
   display: inline-block;
 
   a {
     color: $base-link-color;
     text-decoration: none;
+    font-family: "Sanchez", serif;
   }
 
   aside {
@@ -34,11 +35,18 @@
   }
 
   article {
-    h4 {
+    h1,h2,h3,h4 {
+      font-family: "Sanchez", serif;
+      font-size: 1.25em;
       margin: 0 0 0.5em 0;
+    }
+    iframe  {
+      width:  800px;
+      height: 450px;
     }
 
     p {
+      font-family: "Sanchez", serif;
       color: $base-font-color;
       line-height: $base-line-height;
     }
@@ -48,7 +56,7 @@
     }
 
     @include media($large-screen) {
-      @include span-columns(7);
+      @include span-columns(8);
     }
   }
 }

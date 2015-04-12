@@ -29,36 +29,47 @@
       <%= cell(:feature, feature).call %>
   <% end %>
 </ul>
-<hr>
 
+<hr>
 <div class="scroll-on-page">
   <aside id="scroll-on-page-top">
-    <a class="scroll-on-page-link" href="#scroll-link-1">
-      <!--<% if @main_1 %>-->
-          <!--<h1 id="scroll-link-1"><%= @main_1["article.title"].as_html_safe(link_resolver()) %> </h1>-->
-      <!--<% end %>-->
-    </a>
-    <a class="scroll-on-page-link" href="#scroll-link-2">
-      <% if @main_2 %>
+    <% if @main_1 %>
+        <a class="scroll-on-page-link" href="#scroll-link-1">
           <h4 id="scroll-link-1"><%= @main_1["article.title"].as_html_safe(link_resolver()) %> </h4>
-      <% end %>
-
-    </a>
+        </a>
+    <% end %>
+    <% if @main_2 %>
+        <a class="scroll-on-page-link" href="#scroll-link-2">
+          <h4 id="scroll-link-2"><%= @main_2["article.title"].as_html_safe(link_resolver()) %> </h4>
+        </a>
+    <% end %>
     <% if @main_3 %>
-    <a class="scroll-on-page-link" href="#scroll-link-3">
-          <h4 id="scroll-link-1"><%= @main_1["article.title"].as_html_safe(link_resolver()) %> </h4>
-    </a>
+        <a class="scroll-on-page-link" href="#scroll-link-3">
+          <h4 id="scroll-link-3"><%= @main_3["article.title"].as_html_safe(link_resolver()) %> </h4>
+        </a>
     <% end %>
   </aside>
 
   <article>
     <section>
-      <h4 id="scroll-link-2">
-        <iframe src="https://player.vimeo.com/video/124700316" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        <!--<% if @main_1 %>-->
-            <!--<%= @main_1.as_html_safe(link_resolver()) %>-->
-        <!--<% end %>-->
-      </h4>
+      <h4 id="scroll-link-1"></h4>
+      <% if @main_1 %>
+          <%= @main_1.as_html_safe(link_resolver()) %>
+          <hr>
+      <% end %>
+    </section>
+    <section>
+      <h4 id="scroll-link-2"></h4>
+      <% if @main_2 %>
+          <%= @main_2.as_html_safe(link_resolver()) %>
+          <hr>
+      <% end %>
+    </section>
+    <section>
+      <% if @main_3 %>
+          <h4 id="scroll-link-3"></h4>
+          <%= @main_3.as_html_safe(link_resolver()) %>
+      <% end %>
     </section>
     <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
   </article>
