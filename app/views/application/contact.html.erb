@@ -10,93 +10,93 @@
 <h3>We&#8217;ll reply as soon as possible.</h3>
 </div>
 
-<div id="contact-form" class="form-inputs">
-  <fieldset>
-    <form accept-charset="UTF-8" class="form-input" action="https://formkeep.com/f/4ae1770fecf4" method="POST">
-      <input type="hidden" name="utf8" value="✓">
-      <input type="email" name="email" placeholder="Your Email">
-      <input type="text" name="name" placeholder="Your Name">
-      <textarea name="comment" rows="6" placeholder="Enter comments here ..."></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </fieldset>
-</div>
-
-<div id="map_intro">
-  <hr />
-  <h1>Stop by the Mission</h1>
-  <h3>Mission Hours</h3>
-  <h4>
-    <ul>
-      <li>Monday 1:30 to 4:30 </li>
-      <li>Tuesday 8:30 to 11:30</li>
-      <li>Thursday 8:30 to 11:30</li>
-      <li>Friday 1:30 to 4:30</li>
-    </ul> </h4>
-
-
-  <polymer-element name="google-map" attributes="latitude longitude zoom showCenterMarker">
-    <script>
-        Polymer('google-map', {
-            latitude: '-34.397',
-            longitude: '150.644',
-            zoom: 10,
-            showCenterMarker: false,
-            created: function() {
-                var options = {
-                    zoom: this.zoom,
-                    center: new google.maps.LatLng(this.latitude, this.longitude)
-                };
-                this.map = new google.maps.Map(this, options);
-            },
-            enteredDocument: function() {
-                this.resize();
-            },
-            resize: function() {
-                google.maps.event.trigger(this.map, 'resize');
-               this.updateCenter();
-            },
-            latitudeChanged: function() {
-                this.asyncUpdateCenter();
-            },
-            longitudeChanged: function() {
-                this.asyncUpdateCenter();
-            }, zoomChanged: function() {
-              this.map.setZoom(this.zoom);
-            },
-            showCenterMarkerChanged: function() {
-                if (this.centerMarker) {
-                    this.centerMarker.setMap(this.showCenterMarker ? this.map : null);
-                }
-            },
-            asyncUpdateCenter: function() {
-                this.updateCenterJob = this.job(
-                        this.updateCenterJob, this.updateCenter, 0);
-            },
-            updateCenter: function() {
-                this.map.setCenter(
-                        new google.maps.LatLng(this.latitude, this.longitude));
-                this.updateCenterMarker();
-            },
-            updateCenterMarker: function() {
-                if (!this.centerMarker) {
-                    this.centerMarker = new google.maps.Marker({
-                        map: this.map
-                    });
-                }
-                this.centerMarker.setPosition(this.map.getCenter());
-                this.showCenterMarkerChanged();
-            }
-        });
-    </script>
-  </polymer-element>
-
-  <google-maps></google-maps>
-  <iframe width='1200' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/tbrooke.map-xse0zknl.html#16/35.56902770480959/-80.58153033256531'></iframe>
-  <p></p>
-
-
-
+<!-- <div id="contact&#45;form" class="form&#45;inputs"> -->
+<!--   <fieldset> -->
+<!--     <form accept&#45;charset="UTF&#45;8" class="form&#45;input" action="https://formkeep.com/f/4ae1770fecf4" method="POST"> -->
+<!--       <input type="hidden" name="utf8" value="✓"> -->
+<!--       <input type="email" name="email" placeholder="Your Email"> -->
+<!--       <input type="text" name="name" placeholder="Your Name"> -->
+<!--       <textarea name="comment" rows="6" placeholder="Enter comments here ..."></textarea> -->
+<!--       <button type="submit">Submit</button> -->
+<!--     </form> -->
+<!--   </fieldset> -->
+<!-- </div> -->
+<!--  -->
+<!-- <div id="map_intro"> -->
+<!--   <hr /> -->
+<!--   <h1>Stop by the Mission</h1> -->
+<!--   <h3>Mission Hours</h3> -->
+<!--   <h4> -->
+<!--     <ul> -->
+<!--       <li>Monday 1:30 to 4:30 </li> -->
+<!--       <li>Tuesday 8:30 to 11:30</li> -->
+<!--       <li>Thursday 8:30 to 11:30</li> -->
+<!--       <li>Friday 1:30 to 4:30</li> -->
+<!--     </ul> </h4> -->
+<!--  -->
+<!--  -->
+<!--   <polymer&#45;element name="google&#45;map" attributes="latitude longitude zoom showCenterMarker"> -->
+<!--     <script> -->
+<!--         Polymer('google&#45;map', { -->
+<!--             latitude: '&#45;34.397', -->
+<!--             longitude: '150.644', -->
+<!--             zoom: 10, -->
+<!--             showCenterMarker: false, -->
+<!--             created: function() { -->
+<!--                 var options = { -->
+<!--                     zoom: this.zoom, -->
+<!--                     center: new google.maps.LatLng(this.latitude, this.longitude) -->
+<!--                 }; -->
+<!--                 this.map = new google.maps.Map(this, options); -->
+<!--             }, -->
+<!--             enteredDocument: function() { -->
+<!--                 this.resize(); -->
+<!--             }, -->
+<!--             resize: function() { -->
+<!--                 google.maps.event.trigger(this.map, 'resize'); -->
+<!--                this.updateCenter(); -->
+<!--             }, -->
+<!--             latitudeChanged: function() { -->
+<!--                 this.asyncUpdateCenter(); -->
+<!--             }, -->
+<!--             longitudeChanged: function() { -->
+<!--                 this.asyncUpdateCenter(); -->
+<!--             }, zoomChanged: function() { -->
+<!--               this.map.setZoom(this.zoom); -->
+<!--             }, -->
+<!--             showCenterMarkerChanged: function() { -->
+<!--                 if (this.centerMarker) { -->
+<!--                     this.centerMarker.setMap(this.showCenterMarker ? this.map : null); -->
+<!--                 } -->
+<!--             }, -->
+<!--             asyncUpdateCenter: function() { -->
+<!--                 this.updateCenterJob = this.job( -->
+<!--                         this.updateCenterJob, this.updateCenter, 0); -->
+<!--             }, -->
+<!--             updateCenter: function() { -->
+<!--                 this.map.setCenter( -->
+<!--                         new google.maps.LatLng(this.latitude, this.longitude)); -->
+<!--                 this.updateCenterMarker(); -->
+<!--             }, -->
+<!--             updateCenterMarker: function() { -->
+<!--                 if (!this.centerMarker) { -->
+<!--                     this.centerMarker = new google.maps.Marker({ -->
+<!--                         map: this.map -->
+<!--                     }); -->
+<!--                 } -->
+<!--                 this.centerMarker.setPosition(this.map.getCenter()); -->
+<!--                 this.showCenterMarkerChanged(); -->
+<!--             } -->
+<!--         }); -->
+<!--     </script> -->
+<!--   </polymer&#45;element> -->
+<!--  -->
+<!--   <google&#45;maps></google&#45;maps> -->
+<!--   <iframe width='1200' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/tbrooke.map&#45;xse0zknl.html#16/35.56902770480959/&#45;80.58153033256531'></iframe> -->
+<!--   <p></p> -->
+<!--  -->
+<!--  -->
+<!--  -->
 </article>
 
 
