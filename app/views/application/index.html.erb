@@ -55,7 +55,7 @@
     </div>
   </aside>
 
-  <article>
+   <article> 
     <section>
       <h4 id="scroll-link-1"></h4>
       <% if @main_1 %>
@@ -63,20 +63,20 @@
           <hr>
       <% end %>
     </section>
-    <section>
-      <h4 id="scroll-link-2"></h4>
-      <% if @main_2 %>
-          <%= @main_2.as_html_safe(link_resolver()) %>
-          <hr>
-      <% end %>
-    </section>
-    <section>
-      <% if @main_3 %>
-          <h4 id="scroll-link-3"></h4>
-          <%= @main_3.as_html_safe(link_resolver()) %>
-      <% end %>
-    </section>
-    <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
-  </article>
+  <!--   <section> -->
+  <!--     <h4 id="scrol-link-2"></h4> -->
+  <!--     <% if @main_2 %> -->
+  <!--         <%= @main_2.as_html_safe(link_resolver()) %> -->
+  <!--         <hr> -->
+  <!--     <% end %> -->
+  <!--   </section> -->
+  <!--   <section> -->
+  <!--     <% if @main_3 %> -->
+  <!--         <h4 id="scroll&#45;link&#45;3"></h4> -->
+  <!--         <%= @main_3.as_html_safe(link_resolver()) %> -->
+  <!--     <% end %> -->
+  <!--   </section> -->
+  <!--   <a class="scroll&#45;on&#45;page&#45;link" href="#scroll&#45;on&#45;page&#45;top">Back to top</a> -->
+  <!-- </article> -->
 </div>
 
