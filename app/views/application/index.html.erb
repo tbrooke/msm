@@ -32,51 +32,47 @@
 
 <hr>
 <div class="scroll-on-page">
-  <aside id="scroll-on-page-top">
-    <% if @main_1 %>
-        <a class="scroll-on-page-link" href="#scroll-link-1">
-          <h4 id="scroll-link-1"><%= @main_1["article.title"].as_html_safe(link_resolver()) %> </h4>
-        </a>
-    <% end %>
-    <% if @main_2 %>
-        <a class="scroll-on-page-link" href="#scroll-link-2">
-          <h4 id="scroll-link-2"><%= @main_2["article.title"].as_html_safe(link_resolver()) %> </h4>
-        </a>
-    <% end %>
-    <% if @main_3 %>
-        <a class="scroll-on-page-link" href="#scroll-link-3">
-          <h4 id="scroll-link-3"><%= @main_3["article.title"].as_html_safe(link_resolver()) %> </h4>
-        </a>
-    <% end %>
+<aside id="scroll-on-page-top">
 
-    <div>
-
-
-    </div>
-  </aside>
+ <article class="type-system-geometric">
+   <div class="aside">
+    <h2>Current News</h2>
+    <hr>
+     <% @articles.each do |article| %>
+        <% if cell(:article, article) %>
+            <section>
+              <%= cell(:article, article).call %>
+            </section>
+              <hr>
+        <% end %>
+    <% end %>
+  </div>
+ </article>
+</aside>
 
    <article> 
     <section>
       <h4 id="scroll-link-1"></h4>
       <% if @main_1 %>
+      <div class="main-title">
           <%= @main_1.as_html_safe(link_resolver()) %>
+      </div>
+        <% end %>
+    </section>
+    <section class="main-title">
+      <h4 id="scrol-link-2"></h4>
+      <% if @main_2 %>
+          <%= @main_2.as_html_safe(link_resolver()) %>
           <hr>
       <% end %>
     </section>
-  <!--   <section> -->
-  <!--     <h4 id="scrol-link-2"></h4> -->
-  <!--     <% if @main_2 %> -->
-  <!--         <%= @main_2.as_html_safe(link_resolver()) %> -->
-  <!--         <hr> -->
-  <!--     <% end %> -->
-  <!--   </section> -->
-  <!--   <section> -->
-  <!--     <% if @main_3 %> -->
-  <!--         <h4 id="scroll&#45;link&#45;3"></h4> -->
-  <!--         <%= @main_3.as_html_safe(link_resolver()) %> -->
-  <!--     <% end %> -->
-  <!--   </section> -->
-  <!--   <a class="scroll&#45;on&#45;page&#45;link" href="#scroll&#45;on&#45;page&#45;top">Back to top</a> -->
-  <!-- </article> -->
+    <section>
+      <% if @main_3 %>
+          <h4 id="scroll-link-3"></h4>
+          <%= @main_3.as_html_safe(link_resolver()) %>
+      <% end %>
+    </section>
+    <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
+  </article>
 </div>
 

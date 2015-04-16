@@ -1,10 +1,9 @@
 <article class="type-system-geometric">
-  <div class="main-body">
+  <div class="main-body grid-items-lines">
+    <h1> News about the Mission</h1>
     <% @articles.each do |article| %>
         <% if cell(:article, article) %>
-            <section>
               <%= cell(:article, article).call %>
-            </section>
         <% end %>
     <% end %>
   </div>

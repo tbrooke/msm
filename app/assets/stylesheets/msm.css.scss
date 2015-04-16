@@ -5,6 +5,18 @@ body {
   margin: 0px;
 }
 
+.main-title {
+    h1 {
+  font-family: "Sanchez", serif;
+  font-size: 1.5em;
+  text-align: center;
+   }
+   h2 {
+    font-family: "Sanchez", serif;
+    text-align: center;
+    font-size: 1em;
+  }
+}
 
 #giving {position:relative;
   padding-top: 113px;
