@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   rescue_from Prismic::Error, with: :clearcookies
 
   # Homepage action: querying the "everything" form (all the documents, paginated by 20)
+  #
   def index
     @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
     @features =  api.form("features")
