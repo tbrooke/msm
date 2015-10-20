@@ -1,5 +1,5 @@
 ---
-url: https://mainstmission.prismic.io/api
+url: https://mainstmission.cdn.prismic.io/api
 # If specified this token is used for all "guest" requests
 token: "MC5VMDNzWFFFQUFDc0E1QWxu.Mu-_ve-_ve-_vRPvv71L77-977-9Lxzvv73vv73vv73vv71OLiUSEz4z77-9D--_vUrvv73vv73vv73vv70Y77-9"
 # OAuth2 configuration
