@@ -45,6 +45,12 @@
       height: 450px;
     }
 
+    .about {
+      iframe  {
+        width:  800px;
+        height: 450px;
+      } 
+    }
     p {
       font-family: "Sanchez", serif;
       color: $base-font-color;
