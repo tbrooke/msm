@@ -1,8 +1,16 @@
+<div id="about-page" class="scroll-on-page">
+  <aside id="scroll-on-page-top">
+    <article class="type-system-geometric">
+      <div class="aside">
+        <h1>Food Pantry Hours</h1>
+        <p>Monday and Friday, 1:30-4:30 pm</p>
 
-<article>
-  <section>
-  <div id="about-page">
-    <%= @document.as_html_safe(link_resolver()) %>
-  </div>
-  </section>
-</article>
+       <p> Tuesday and Thursday, 8:30-11:00 am</p>
+      </div>
+    </article>
+  </aside>
+  <article>
+    <section class="main-title">
+      <%= @document.as_html_safe(link_resolver()) %>
+    </section>
+  </article>

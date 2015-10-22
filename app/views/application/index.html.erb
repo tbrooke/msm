@@ -3,11 +3,11 @@
 <% if @document['homepage.main_image'] %>
     <div id="main-image">
       <style type="text/css">
-          @media (min-width: 993px) {
-              #main-image {
-                  background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>')
-              }
+        @media (min-width: 993px) {
+          #main-image {
+            background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>')
           }
+        }
       </style>
     </div>
 <% end %>
@@ -20,47 +20,45 @@
 
 <hr>
 <div class="scroll-on-page">
-<aside id="scroll-on-page-top">
+  <aside id="scroll-on-page-top">
 
- <article class="type-system-geometric">
-   <div class="aside">
-    <h2>Current News</h2>
-    <hr>
-     <% @articles.each do |article| %>
-        <% if cell(:article, article) %>
-            <section>
-              <%= cell(:article, article).call %>
-            </section>
-              <hr>
+    <article class="type-system-geometric">
+      <div class="aside">
+        <h2>Current News</h2>
+        <hr>
+        <% @articles.each do |article| %>
+            <% if cell(:article, article) %>
+                <section>
+                  <%= cell(:article, article).call %>
+                </section>
+                <hr>
+            <% end %>
         <% end %>
-    <% end %>
-  </div>
- </article>
-</aside>
+      </div>
+    </article>
+  </aside>
 
-   <article> 
+  <article>
     <section>
       <h4 id="scroll-link-1"></h4>
       <% if @main_1 %>
-      <div class="main-title">
-          <%= @main_1.as_html_safe(link_resolver()) %>
-      </div>
-        <% end %>
-    </section>
-    <section class="main-title">
-      <h4 id="scrol-link-2"></h4>
-      <% if @main_2 %>
-          <%= @main_2.as_html_safe(link_resolver()) %>
-          <hr>
-      <% end %>
-    </section>
-    <section>
-      <% if @main_3 %>
-          <h4 id="scroll-link-3"></h4>
-          <%= @main_3.as_html_safe(link_resolver()) %>
-      <% end %>
-    </section>
-    <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
+      <%= @main_1.as_html_safe(link_resolver()) %>
+  <% end %>
+  </section>
+  <section class="main-title">
+    <h4 id="scrol-link-2"></h4>
+    <% if @main_2 %>
+        <%= @main_2.as_html_safe(link_resolver()) %>
+        <hr>
+    <% end %>
+  </section>
+  <section>
+    <% if @main_3 %>
+        <h4 id="scroll-link-3"></h4>
+        <%= @main_3.as_html_safe(link_resolver()) %>
+    <% end %>
+  </section>
+  <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
   </article>
-</div>
+  </div>
 

@@ -28,6 +28,11 @@ body {
       }
 }
 
+#vid {
+  width: 450px;
+}
+
+
 
 #giving {position:relative;
   padding-top: 113px;
@@ -98,7 +103,10 @@ body {
 
 }
 
-
+#about-page {
+  margin-top: 60px;
+  margin-left: 20px;
+}
 
 main {
   font-family: "Sanchez", serif;
@@ -119,6 +127,7 @@ $parallax-background-height: $parallax-window-height * 2;
 .parallax-static-content {
   color: #9A9A8A;
   padding: 8em 0;
+  text-align: left;
   position: relative;
   z-index: 9;
  }
