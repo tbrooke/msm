@@ -88,6 +88,9 @@ class ApplicationController < ActionController::Base
   def contact
   end
 
+  def mail
+  end
+
 
   def about
     @document = PrismicService.get_document(api.bookmark("about"), api, ref)

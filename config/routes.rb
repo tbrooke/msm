@@ -93,6 +93,11 @@ StarterRubyRails::Application.routes.draw do
 
   get '/need', to: 'application#need', as: :need
 
+  ## mail
+
+  get '/mail', to: 'application#mail', as: :mail
+
+
   ## volunteer
 
   get '/volunteer', to: 'application#volunteer', as: :volunteer
