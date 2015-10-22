@@ -19,7 +19,6 @@ class ApplicationController < ActionController::Base
     @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
     @google_id = api.experiments.current
     @articles = api.form("articles")
-                    .orderings("[my.article.date ]")
                      .page(params[:page] ? params[:page] : "1")
                      .page_size(params[:page_size] ? params[:page_size] : "3")
                     .submit(ref)
@@ -60,7 +59,7 @@ class ApplicationController < ActionController::Base
   def news
     @google_id = api.experiments.current
     @articles = api.form("articles")
-                    .orderings("[my.article.date]")
+                    .orderings("[my.article.date desc]")
                     .submit(ref)
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")
