@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require nav
-//= require segmentio
+//= require googlea
 //= require_tree .
