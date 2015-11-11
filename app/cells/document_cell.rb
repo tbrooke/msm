@@ -21,11 +21,14 @@ class DocumentCell < Cell::ViewModel
     if model['document.longlede']
       model['document.longlede'].as_html_safe(link_resolver())
     end
+
     def content
-    if model['document.content']
-      model['document.content'].as_html_safe(link_resolver())
+      if model['document.content']
+        model['document.content'].as_html_safe(link_resolver())
+
+      end
 
     end
-
   end
 end
+
