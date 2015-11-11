@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
-    @sliders   = api.form("slider").submit(ref)
+    @sliders  = api.form("slider").submit(ref)
     @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
     @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
     @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
@@ -117,25 +117,31 @@ class ApplicationController < ActionController::Base
   end
 
 
-
-
-
-
-
+  def event
+    @google_id = api.experiments.current
+    @events = api.form("event")
+                  .page(params[:page] ? params[:page] : "1")
+                  .page_size(params[:page_size] ? params[:page_size] : "3")
+                  .submit(ref)
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+  end
 
 
   def mail
   end
 
-  def event
-    @document  = PrismicService.get_document(api.bookmark("event"), api, ref)
+  def project
+    @document  = PrismicService.get_document(api.bookmark("project"), api, ref)
     @google_id = api.experiments.current
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")
                      .page_size(params[:page_size] ? params[:page_size] : "20")
                      .submit(ref)
-    @events = api.form("event")
-                .submit(ref)
+    @projects = api.form("project")
+                  .submit(ref)
   end
 
 

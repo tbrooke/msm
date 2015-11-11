@@ -106,6 +106,10 @@ StarterRubyRails::Application.routes.draw do
 
   get '/event', to:'application#event', as: :event
 
+  ## Projects
+
+  get '/project', to:'application#project', as: :project
+
   ## volunteer
 
   get '/volunteer', to: 'application#volunteer', as: :volunteer
