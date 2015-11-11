@@ -1,9 +1,9 @@
 <article class="type-system-geometric">
   <div class="main-body grid-items-lines">
     <h1> News about the Mission</h1>
-    <% @articles.each do |article| %>
-        <% if cell(:article, article) %>
-              <%= cell(:article, article).call %>
+    <% @news.each do |article| %>
+        <% if cell(:news, article) %>
+              <%= cell(:news, article).call %>
         <% end %>
     <% end %>
   </div>

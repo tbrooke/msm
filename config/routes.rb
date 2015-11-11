@@ -78,6 +78,11 @@ StarterRubyRails::Application.routes.draw do
   ## About
   get '/about', to: 'application#about', as: :about
 
+  ## Dignity
+  #
+
+  get '/dignity', to: 'application#dignity', as: :dignity
+
   ## news
   get '/news', to: 'application#news', as: :news
 
@@ -97,6 +102,9 @@ StarterRubyRails::Application.routes.draw do
 
   get '/mail', to: 'application#mail', as: :mail
 
+  ## Events
+
+  get '/event', to:'application#event', as: :event
 
   ## volunteer
 

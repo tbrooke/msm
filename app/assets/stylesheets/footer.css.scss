@@ -63,26 +63,26 @@
     margin: 0 auto;
     //padding-left: 12em;
     text-align: center;
-    paddin-left: 1em;
-    width: 440px;
+    padding-left: 1em;
+    width: 400px;
 
     @include media($large-screen) {
       float: left;
       margin-top: 25 px;
-      margin-bottom: 0;
+      irujkkjjjjkfuurgin-bottom: 0;
     }
   }
 
 
-  #signup{
+  #signup {
     color: $footer-link-color;
-    margin-top: 10px;
+    margin-top: 20px;
     float: left;
   }
 
   .footer-logo img {
     height: 7.5em;
-    margin: 0;
+    margin: -10px;
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;

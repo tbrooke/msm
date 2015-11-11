@@ -14,5 +14,18 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require nav
+//= require jquery.flexslider.js
 //= require googlea
 //= require_tree .
+//
+
+$(window).load(function() {
+    $('.flexslider').flexslider({
+        animation: "slide",
+        smoothHeight: true,
+        controlNav: true,
+        directionNav: true
+    });
+
+});
+

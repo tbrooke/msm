@@ -1,17 +1,7 @@
 <%= render 'partials/hero' %>
 
-<% if @document['homepage.main_image'] %>
-    <div id="main-image">
-      <style type="text/css">
-        @media (min-width: 993px) {
-          #main-image {
-            background-image: url('<%= @document['homepage.main_image'].get_view('large').url %>')
-          }
-        }
-      </style>
-    </div>
-<% end %>
 
+<hr>
 <ul class="bullets">
   <% @features.each do |feature| %>
       <%= cell(:feature, feature).call %>
@@ -26,10 +16,10 @@
       <div class="aside">
         <h2>Current News</h2>
         <hr>
-        <% @articles.each do |article| %>
-            <% if cell(:article, article) %>
+        <% @news.each do |article| %>
+            <% if cell(:news, article) %>
                 <section>
-                  <%= cell(:article, article).call %>
+                  <%= cell(:news, article).call %>
                 </section>
                 <hr>
             <% end %>
@@ -46,7 +36,7 @@
   <% end %>
   </section>
   <section class="main-title">
-    <h4 id="scrol-link-2"></h4>
+    <h4 id="scroll-link-2"></h4>
     <% if @main_2 %>
         <%= @main_2.as_html_safe(link_resolver()) %>
         <hr>

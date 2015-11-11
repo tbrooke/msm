@@ -27,6 +27,7 @@ class ArticleCell < Cell::ViewModel
      end
    end
   
+   def content
 
-  
+   end
 end

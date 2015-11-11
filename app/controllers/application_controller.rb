@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
+    @sliders   = api.form("slider").submit(ref)
     @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
     @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
     @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
@@ -21,6 +22,10 @@ class ApplicationController < ActionController::Base
     @articles = api.form("articles")
                      .page(params[:page] ? params[:page] : "1")
                      .page_size(params[:page_size] ? params[:page_size] : "3")
+                    .submit(ref)
+    @news = api.form("news")
+                    .page(params[:page] ? params[:page] : "1")
+                    .page_size(params[:page_size] ? params[:page_size] : "3")
                     .submit(ref)
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")
@@ -58,8 +63,7 @@ class ApplicationController < ActionController::Base
 
   def news
     @google_id = api.experiments.current
-    @articles = api.form("articles")
-                    .orderings("[my.article.date desc]")
+    @news = api.form("news")
                     .submit(ref)
     @documents = api.form("everything")
                      .page(params[:page] ? params[:page] : "1")
@@ -88,7 +92,50 @@ class ApplicationController < ActionController::Base
   def contact
   end
 
+
+  def dignity
+    @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
+    @features =  api.form("features")
+                    .orderings("[my.feature.position]")
+                    .submit(ref)
+    @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
+    @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
+    @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
+    @google_id = api.experiments.current
+    @articles = api.form("articles")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "3")
+                    .submit(ref)
+    @news = api.form("news")
+                    .page(params[:page] ? params[:page] : "1")
+                    .page_size(params[:page_size] ? params[:page_size] : "3")
+                    .submit(ref)
+    @documents = api.form("everything")
+                    .page(params[:page] ? params[:page] : "1")
+                    .page_size(params[:page_size] ? params[:page_size] : "20")
+                    .submit(ref)
+  end
+
+
+
+
+
+
+
+
+
   def mail
+  end
+
+  def event
+    @document  = PrismicService.get_document(api.bookmark("event"), api, ref)
+    @google_id = api.experiments.current
+    @documents = api.form("everything")
+                     .page(params[:page] ? params[:page] : "1")
+                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                     .submit(ref)
+    @events = api.form("event")
+                .submit(ref)
   end
 
 
