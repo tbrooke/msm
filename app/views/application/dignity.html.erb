@@ -1,0 +1,52 @@
+
+
+<ul class="bullets">
+  <% @features.each do |feature| %>
+      <%= cell(:feature, feature).call %>
+  <% end %>
+</ul>
+
+<hr>
+<div class="scroll-on-page">
+  <aside id="scroll-on-page-top">
+
+    <article class="type-system-geometric">
+      <div class="aside">
+        <h2>Current News</h2>
+        <hr>
+        <% @news.each do |article| %>
+            <% if cell(:news, article) %>
+                <section>
+                  <%= cell(:news, article).call %>
+                </section>
+                <hr>
+            <% end %>
+        <% end %>
+      </div>
+    </article>
+  </aside>
+
+  <article>
+    <section>
+      <h4 id="scroll-link-1"></h4>
+      <% if @main_1 %>
+      <%= @main_1.as_html_safe(link_resolver()) %>
+  <% end %>
+  </section>
+  <section class="main-title">
+    <h4 id="scroll-link-2"></h4>
+    <% if @main_2 %>
+        <%= @main_2.as_html_safe(link_resolver()) %>
+        <hr>
+    <% end %>
+  </section>
+  <section>
+    <% if @main_3 %>
+        <h4 id="scroll-link-3"></h4>
+        <%= @main_3.as_html_safe(link_resolver()) %>
+    <% end %>
+  </section>
+  <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
+  </article>
+  </div>
+
