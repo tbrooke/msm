@@ -1,6 +1,6 @@
-<article class="type-system-geometric">
+<article>
   <div class="main-body grid-items-lines">
-    <h1> News about the Mission</h1>
+    <h3> News about the Mission</h3>
     <% @news.each do |article| %>
         <% if cell(:news, article) %>
               <%= cell(:news, article).call %>

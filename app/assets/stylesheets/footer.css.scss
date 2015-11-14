@@ -73,6 +73,15 @@
     }
   }
 
+  #address-block {
+    text-align: left;
+    line-height: 1em;
+    float: left;
+    color: $footer-color;
+    width: 400px;
+    margin: 0;
+  }
+
 
   #signup {
     color: $footer-link-color;

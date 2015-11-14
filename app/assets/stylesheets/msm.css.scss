@@ -1,38 +1,70 @@
-
+@import "grid_items";
 $max-width: em(860);
+
+
+@font-face {
+  font-family: 'charterbold_italic';
+  src: url('charter_bold_italic-webfont.eot');
+  src: url('charter_bold_italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url('charter_bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'charterbold';
+  src: url('charter_bold-webfont.eot');
+  src: url('charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('charter_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'charterregular';
+  src: url('charter_regular-webfont.eot');
+  src: url('charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('charter_regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
-  font-family: "Sanchez", serif;
+  font-family: "charterregular", serif;
   margin: 0px;
+  font-size: 1.25em;
     h1 {
-  font-family: "Sanchez", serif;
+  font-family: "charterregular", serif;
   font-size: 2.5em;
   font-weight: 700;
   text-align: center;
    }
    h2 {
-    font-family: "Sanchez", serif;
+    font-family: "charterregular", serif;
     text-align: center;
-    font-weight: 500;
-    font-size: 2em;
+    font-weight: 700;
+    font-size: 2.25em;
       }
    h3 {
-    font-family: "Sanchez", serif;
+    font-family: "charterrregular", serif;
     text-align: center;
     font-weight: 400;
     font-size: 1.5em;
       }
    h4 {
-    font-family: "Sanchez", serif;
-    font-weight: 400;
-    font-size: 1.5em;
+    font-family: "charterregular", serif;
+    font-weight: 300;
       }
 }
 
 #vid {
   width: 450px;
 }
-
-
 
 #giving {position:relative;
   padding-top: 113px;
@@ -123,7 +155,7 @@ body {
 }
 
 main {
-  font-family: "Sanchez", serif;
+  font-family: "charterregular", serif;
   margin: 0px;
 }
 
@@ -173,7 +205,7 @@ fieldset {
   }
   margin-left: 20px;
 }
-article.type-system-geometric {
+article {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
@@ -209,7 +241,7 @@ article.type-system-geometric {
   //////////////////////////////////////////////////////////////////////////////////
 
   $sans-serif: 'Questrial', sans-serif;
-  $serif: 'Sanchez', serif;
+  $serif: 'charterregular', serif;
 
   @include clearfix;
   text-align: left;
@@ -281,7 +313,7 @@ article.type-system-geometric {
   }
 
   p {
-    font-family: $sans-serif;
+    font-family: $serif;
     font-size: 1.05em;
     line-height: 1.5em;
     margin-bottom: 1.5em;
@@ -289,7 +321,7 @@ article.type-system-geometric {
 
   a.read-more {
     display: inline-block;
-    font-family: $sans-serif;
+    font-family: $serif;
     font-size: 0.8em;
     font-weight: 700;
     margin-left: 0.2em;
@@ -297,7 +329,7 @@ article.type-system-geometric {
     text-transform: uppercase;
 
     span {
-      font-family: $sans-serif;
+      font-family: $serif;
       font-size: 1.5em;
       font-style: normal;
       position: absolute;
@@ -311,6 +343,8 @@ article.type-system-geometric {
   }
 
   p.author {
-    font-family: $sans-serif;
+    font-family: $serif;
   }
 }
+
+

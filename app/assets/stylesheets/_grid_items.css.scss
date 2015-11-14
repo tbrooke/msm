@@ -28,7 +28,6 @@
     cursor: pointer;
     float: left;
     height: $grid-item-height;
-    overflow: hidden;
     outline: none;
     padding: 2em;
     text-decoration: none;
@@ -43,6 +42,7 @@
       background: transparentize($grid-item-color, 0.95);
     }
   }
+
 
   .grid-item img {
     display: block;

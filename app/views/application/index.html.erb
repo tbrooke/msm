@@ -9,21 +9,22 @@
 </ul>
 
 <hr>
+
 <div class="scroll-on-page">
   <aside id="scroll-on-page-top">
-
-    <article class="type-system-geometric">
+    <article>
       <div class="aside">
-        <h2>Current News</h2>
-        <hr>
-        <% @news.each do |article| %>
+        <div class="grid-items">
+          <h2>Current News</h2>
+          <hr>
+          <% @news.each do |article| %>
             <% if cell(:news, article) %>
                 <section>
                   <%= cell(:news, article).call %>
                 </section>
-                <hr>
             <% end %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </article>
   </aside>
@@ -50,5 +51,5 @@
   </section>
   <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
   </article>
-  </div>
+</div>
 
