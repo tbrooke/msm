@@ -29,3 +29,5 @@ $(window).load(function() {
 
 });
 
+//
+//document.addEventListener("touchstart", function(){}, true);

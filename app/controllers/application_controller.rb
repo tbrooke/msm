@@ -131,6 +131,11 @@ class ApplicationController < ActionController::Base
 
 
   def mail
+
+  end
+
+  def bridge
+
   end
 
   def project

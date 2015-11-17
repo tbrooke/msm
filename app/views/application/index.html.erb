@@ -11,11 +11,10 @@
 <hr>
 
 <div class="scroll-on-page">
-  <aside id="scroll-on-page-top">
+  <aside>
     <article>
-      <div class="aside">
-        <div class="grid-items">
-          <h2>Current News</h2>
+        <div class="grid-items-lines">
+          <h3>Current News</h3>
           <hr>
           <% @news.each do |article| %>
             <% if cell(:news, article) %>
@@ -25,11 +24,10 @@
             <% end %>
           <% end %>
         </div>
-      </div>
     </article>
   </aside>
 
-  <article>
+  <article class="main-body">
     <section>
       <h4 id="scroll-link-1"></h4>
       <% if @main_1 %>

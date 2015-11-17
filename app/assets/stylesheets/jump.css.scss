@@ -6,14 +6,14 @@
   $dark-gray: #333 !default;
   $large-screen: em(860) !default;
   $base-font-color: $dark-gray !default;
-  font-family: "Sanchez", serif;
+  font-family: "charterregular", serif;
   margin: 10px;
   display: inline-block;
 
   a {
     color: $base-link-color;
     text-decoration: none;
-    font-family: "Sanchez", serif;
+    font-family: "charterregular", serif;
   }
 
   aside {
@@ -36,7 +36,7 @@
 
   article {
     h1,h2,h3,h4 {
-      font-family: "Sanchez", serif;
+      font-family: "charterregular", serif;
       font-size: 1.25em;
       margin: 0 0 0.5em 0;
     }
@@ -52,7 +52,7 @@
       } 
     }
     p {
-      font-family: "Sanchez", serif;
+      font-family: "charterregular", serif;
       color: $base-font-color;
       line-height: $base-line-height;
     }

@@ -3,11 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 gem 'rack', '1.5.2'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 gem 'bourbon'
 gem 'neat'
 gem 'font-awesome-sass'
@@ -26,7 +24,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'flexslider'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'json', '1.8.2'
 
@@ -63,6 +60,7 @@ end
 # Use debugger
 group :development, :test do
   gem 'rspec-rails'
+  gem 'rspec-cells'
   gem 'better_errors'
   gem 'binding_of_caller'
 end

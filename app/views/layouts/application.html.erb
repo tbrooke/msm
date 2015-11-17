@@ -2,26 +2,30 @@
 <html>
 <head>
   <title>MSM</title>
-  <%= stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true %>
+
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <% # This file is required for Experiments and Previews.  %>
+  <script src="//static.cdn.prismic.io/prismic.min.js"></script>
+  <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag  %>
   <%= csrf_meta_tags %>
+
 </head>
 
-<body>
 <header>
-  <% # This file is required for Experiments and Previews. %>
-  <script src="//static.cdn.prismic.io/prismic.min.js"></script>
-  <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag %>
+
   <% render 'partials/experiments', :google_id => @google_id %>
   <%= render 'partials/nav' %>
+
 </header>
 
-<main class="type-system-geometric">
+<body>
+<main>
 
   <%= yield %>
 
 </main>
- <%= render 'partials/footer' %>
 </body>
+<%= render 'partials/footer' %>
 </html>
 

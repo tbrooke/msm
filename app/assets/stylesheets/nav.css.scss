@@ -1,5 +1,6 @@
 @import 'bourbon';
 @import 'neat';
+
 .centered-navigation {
   ///////////////////////////////////////////////////////////////////////////////////
 
@@ -18,7 +19,7 @@
   $centered-navigation-item-padding: 1em;
   $centered-navigation-submenu-padding: 1em;
   $centered-navigation-submenu-width: 12em;
-  $centered-navigation-item-nudge: 2.2em;
+  $centered-navigation-item-nudge: -.5em;
   $horizontal-bar-mode: $large-screen;
 
   background-color: $centered-navigation-background;
@@ -26,8 +27,89 @@
   min-height: $centered-navigation-height;
   width: 100%;
   z-index: 9999;
-  font-family: "Sanchez", serif;
-  font-size: 1.50em;
+  font-family: "charterregular", serif;
+  font-size: 1.25em;
+
+  input[type="submit"] {
+    font-family: FontAwesome;
+  }
+
+  #filtersubmit {
+    position: relative;
+    z-index: 1;
+    bottom: 40px;
+    left: -15px;
+    color: #7B7B7B;
+    cursor: pointer;
+    width: 0;
+  }
+
+  $tl: 0.6s; // transition length
+
+  form.search-container {
+    width: 45px;
+    height: 45px;
+    margin: 10px 0px 10px 10px;
+    padding: 0;
+    float: left;
+  }
+
+
+
+
+  .search-box {
+    transition: width $tl, border-radius $tl,
+    background $tl, box-shadow $tl;
+    background-image: url('search.png');
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      color: white;
+      background: rgb(200, 200, 200);
+      box-shadow: 0 0 0 5px rgb(61, 71, 82);
+      & + label .search-icon {
+        color: white
+      }
+    }
+
+    &:focus {
+      transition: width $tl cubic-bezier(0, 1.22, .66, 1.39), border-radius $tl, background $tl;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      padding-left: 15px;
+      cursor: text;
+      width: 300px;
+      border-radius: auto;
+      background: rgb(235, 235, 235);
+      color: black;
+      & + label .search-icon {
+        color: black;
+      }
+    }
+    &:not(:focus) {
+      text-indent: -5000px;
+    }
+    // for more-graceful falling back (:not browsers likely support indent)
+  }
+
+  #search-submit {
+    position: relative;
+    left: -5000px;
+  }
+
+  .search-icon {
+    position: relative;
+    left: -30px;
+    color: white;
+    cursor: pointer;
+  }
 
   // Mobile view
 
@@ -101,7 +183,7 @@
   // The nav items
 
   .nav-link:first-child {
-   @include media($horizontal-bar-mode) {
+    @include media($horizontal-bar-mode) {
       margin-left: $centered-navigation-item-nudge;
     }
   }
@@ -161,9 +243,9 @@
 
     @include media($large-screen) {
       padding-right: $centered-navigation-submenu-padding;
-   }
+    }
 
-    > ul > li:first-child a  {
+    > ul > li:first-child a {
       padding-top: 1em;
     }
 
@@ -225,12 +307,12 @@
       left: -$centered-navigation-submenu-padding;
       position: absolute;
       top: 1.5em;
-   }
+    }
 
     .submenu {
       @include media($horizontal-bar-mode) {
-       left: $centered-navigation-submenu-width - 0.2em;
-       top: 0;
+        left: $centered-navigation-submenu-width - 0.2em;
+        top: 0;
       }
     }
 
@@ -270,3 +352,5 @@
     }
   }
 }
+
+

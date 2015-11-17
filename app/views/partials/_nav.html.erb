@@ -6,6 +6,12 @@
         <nav role="navigation">
           <article>
             <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+              <li>
+                <form class="search-container" action="/search" method="GET">
+                  <input id="search-box" type="text" class="search-box" name="q" />
+                  <input type="submit" id="search-submit" />
+                </form>
+              </li>
                 <li class="nav-link"><%= link_to "Community", '/community' %></li>
                 <li class="nav-link"><%= link_to "Bridges", '/bridge'  %></li>
                 <li class="nav-link"><%= link_to "News", '/news' %></li>

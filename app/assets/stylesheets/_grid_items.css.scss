@@ -2,6 +2,11 @@
   width: (100% / 12) * $columns;
 }
 
+
+@mixin grid-item-columns-aside($columns) {
+  width: (100% / 3) * $columns;
+}
+
 .grid-items-lines {
   $base-background-color: white !default;
   $dark-gray: #333 !default;
@@ -20,6 +25,8 @@
   @include clearfix;
   position: relative;
 
+
+
   .grid-item {
     @include transition (all 0.2s ease-in-out);
     background: $grid-item-background;
@@ -36,6 +43,28 @@
     @include media($large-screen) {
       @include grid-item-columns($grid-item-columns);
     }
+
+    &:focus,
+    &:hover {
+      background: transparentize($grid-item-color, 0.95);
+    }
+  }
+
+
+  .grid-item-aside {
+    @include transition (all 0.2s ease-in-out);
+    background: $grid-item-background;
+    border-bottom: $grid-item-border;
+    border-right: $grid-item-border;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    outline: none;
+    padding: 2em;
+    text-decoration: none;
+    width: 100%;
+
+    @include grid-item-columns-aside($grid-item-columns);
 
     &:focus,
     &:hover {

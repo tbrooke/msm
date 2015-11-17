@@ -94,6 +94,9 @@ StarterRubyRails::Application.routes.draw do
 
   get '/helping', to: 'application#helping', as: :helping
 
+  ## bridge
+
+  get '/bridge', to: 'application#bridge', as: :bridge
   ## need
 
   get '/need', to: 'application#need', as: :need
