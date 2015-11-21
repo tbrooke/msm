@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+
+
   include PrismicHelper
   include PrismicController
 
@@ -9,27 +11,24 @@ class ApplicationController < ActionController::Base
 
   # Homepage action: querying the "everything" form (all the documents, paginated by 20)
   #
+
   def index
-    @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
+    # @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
-    @sliders  = api.form("slider").submit(ref)
-    @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
-    @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
-    @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
+    @sliders  = api.form('slider').submit(ref)
+    @main_1 = PrismicService.get_document(api.bookmark('main_1'), api, ref)
+    @main_2 = PrismicService.get_document(api.bookmark('main_2'), api, ref)
+    @main_3 = PrismicService.get_document(api.bookmark('main_3'), api, ref)
     @google_id = api.experiments.current
     @articles = api.form("articles")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "3")
+                     .page(params[:page] ? params[:page] : '1')
+                     .page_size(params[:page_size] ? params[:page_size] : '3')
                     .submit(ref)
-    @news = api.form("news")
-                    .page(params[:page] ? params[:page] : "1")
-                    .page_size(params[:page_size] ? params[:page_size] : "3")
-                    .submit(ref)
-    @documents = api.form("everything")
-                    .page(params[:page] ? params[:page] : "1")
-                    .page_size(params[:page_size] ? params[:page_size] : "20")
+    @news = api.form('news')
+                    .page(params[:page] ? params[:page] : '1')
+                    .page_size(params[:page_size] ? params[:page_size] : '3')
                     .submit(ref)
   end
 
@@ -43,110 +42,42 @@ class ApplicationController < ActionController::Base
                      .submit(ref)
   end
 
+  def neighbors
+    @document = PrismicService.get_document(api.bookmark("community"), api, ref)
+    @google_id = api.experiments.current
+  end
+
+  def bridges
+    @document = PrismicService.get_document(api.bookmark("community"), api, ref)
+    @google_id = api.experiments.current
+  end
+
   def donate
     @document = PrismicService.get_document(api.bookmark("donate"), api, ref)
     @google_id = api.experiments.current
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
   end
 
   def need
     @document = PrismicService.get_document(api.bookmark("need"), api, ref)
     @google_id = api.experiments.current
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
   end
+
 
   def news
     @google_id = api.experiments.current
     @news = api.form("news")
-                    .submit(ref)
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
+                .submit(ref)
   end
+
 
   def volunteer
     @document = PrismicService.get_document(api.bookmark("volunteer"), api, ref)
     @google_id = api.experiments.current
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
   end
 
   def helping
     @document = PrismicService.get_document(api.bookmark("helping"), api, ref)
     @google_id = api.experiments.current
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
-  end
-
-  def contact
-  end
-
-
-  def dignity
-    @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
-    @features =  api.form("features")
-                    .orderings("[my.feature.position]")
-                    .submit(ref)
-    @main_1 = PrismicService.get_document(api.bookmark("main_1"), api, ref)
-    @main_2 = PrismicService.get_document(api.bookmark("main_2"), api, ref)
-    @main_3 = PrismicService.get_document(api.bookmark("main_3"), api, ref)
-    @google_id = api.experiments.current
-    @articles = api.form("articles")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "3")
-                    .submit(ref)
-    @news = api.form("news")
-                    .page(params[:page] ? params[:page] : "1")
-                    .page_size(params[:page_size] ? params[:page_size] : "3")
-                    .submit(ref)
-    @documents = api.form("everything")
-                    .page(params[:page] ? params[:page] : "1")
-                    .page_size(params[:page_size] ? params[:page_size] : "20")
-                    .submit(ref)
-  end
-
-
-  def event
-    @google_id = api.experiments.current
-    @events = api.form("event")
-                  .page(params[:page] ? params[:page] : "1")
-                  .page_size(params[:page_size] ? params[:page_size] : "3")
-                  .submit(ref)
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
-  end
-
-
-  def mail
-
-  end
-
-  def bridge
-
-  end
-
-  def project
-    @document  = PrismicService.get_document(api.bookmark("project"), api, ref)
-    @google_id = api.experiments.current
-    @documents = api.form("everything")
-                     .page(params[:page] ? params[:page] : "1")
-                     .page_size(params[:page_size] ? params[:page_size] : "20")
-                     .submit(ref)
-    @projects = api.form("project")
-                  .submit(ref)
   end
 
 
@@ -160,6 +91,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
+
   def document
     id = params[:id]
     slug = params[:slug]
@@ -177,6 +109,7 @@ class ApplicationController < ActionController::Base
   end
 
   # Search result: querying all documents containing the q parameter
+
   def search
     @google_id = api.experiments.current
     @documents = api.form('everything')
@@ -187,6 +120,7 @@ class ApplicationController < ActionController::Base
   end
 
   # For writers to preview a draft with the real layout
+
   def preview
     preview_token = params[:token]
     redirect_url = api.preview_session(preview_token, link_resolver(), '/')

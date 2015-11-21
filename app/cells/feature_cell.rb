@@ -2,9 +2,13 @@ class FeatureCell < Cell::ViewModel
    include PrismicHelper
    include PrismicController
 
+
+
+
    inherit_views EventCell
 
   def show
+
     render
   end
 
@@ -20,8 +24,9 @@ class FeatureCell < Cell::ViewModel
   end
 
   def lede
-    model['feature.longlede'].as_html_safe(link_resolver())
-
+    if model['feature.longlede']
+      model['feature.longlede'].as_html_safe(link_resolver())
+    end
   end
 end
 

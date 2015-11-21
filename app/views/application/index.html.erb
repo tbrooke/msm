@@ -4,7 +4,7 @@
 <hr>
 <ul class="bullets">
   <% @features.each do |feature| %>
-      <%= cell(:feature, feature).call %>
+      <%= cell(:feature, feature) %>
   <% end %>
 </ul>
 
@@ -17,7 +17,7 @@
           <h3>Current News</h3>
           <hr>
           <% @news.each do |article| %>
-            <% if cell(:news, article) %>
+            <% if cell(:news, article).call %>
                 <section>
                   <%= cell(:news, article).call %>
                 </section>
@@ -31,7 +31,7 @@
     <section>
       <h4 id="scroll-link-1"></h4>
       <% if @main_1 %>
-      <%= @main_1.as_html_safe(link_resolver()) %>
+      <%= @main_1.as_html_safe(link_resolver())%>
   <% end %>
   </section>
   <section class="main-title">
