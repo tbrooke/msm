@@ -237,6 +237,13 @@ aside {
   foat: left;
 }
 
+
+section[data-field="illustration"] {
+  width: 600px;
+  float: left;
+  margin: 10px;
+}
+
 article {
   ///////////////////////////////////////////////////////////////////////////////////
   $base-border-radius: 3px !default;
