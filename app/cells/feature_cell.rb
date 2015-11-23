@@ -1,11 +1,8 @@
 class FeatureCell < Cell::ViewModel
+
    include PrismicHelper
    include PrismicController
 
-
-
-
-   inherit_views EventCell
 
   def show
 

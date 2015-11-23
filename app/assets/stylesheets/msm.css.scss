@@ -75,8 +75,8 @@ body {
   position:relative;
   padding-top: 113px;
   padding-left: 0px;
-  margin: 25px 25px 25px 410px;
-  float:none;
+  float: left;
+  margin: 25px 25px 25px 40px;
   background-color:"rgba(255, 255, 153)";
   background-image: url("HelpingHands_Logo.png");
   background-repeat: no-repeat;
@@ -195,13 +195,46 @@ fieldset {
 }
 
 
-aside {
-  @include span-columns(3);
-  margin: 20px;
+.homepage {
+  img {
+    float: right;
+  }
+  h1,h2,h3,h4,p {
+    float: right;
+  }
 }
 
-.main-body {
-  @include span-columns(9);
+aside {
+  @include span-columns(3);
+  float: left;
+  margin: 20px;
+  .wide-aside {
+    @include span-columns(5);
+  }
+}
+
+.scroll-on-page {
+  @include span-columns(12)
+}
+
+.main-body-homepage {
+  @include span-columns(12);
+  margin: 40px;
+  border-bottom: inset;
+}
+
+.main-body-text {
+  @include span-columns(8);
+  float: right;
+  h1 {
+    text-align: center;
+    font-size: 1.5em;
+  }
+}
+
+.main-illustration {
+  @include span-columns(3);
+  foat: left;
 }
 
 article {

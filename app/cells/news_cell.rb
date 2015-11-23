@@ -1,4 +1,5 @@
 class NewsCell < Cell::ViewModel
+
   include PrismicHelper
   include PrismicController
 
@@ -13,7 +14,7 @@ class NewsCell < Cell::ViewModel
   end
 
   def image
-    model['news.main_image']
+    model['news.image']
   end
 
   def link

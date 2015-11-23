@@ -1,0 +1,10 @@
+<article class="type-system-geometric">
+  <div class="main-body grid-items-lines">
+    <h1> Events at Main Street</h1>
+    <% @projects.each do |article| %>
+        <% if cell(:project, article) %>
+            <%= cell(:project, article).call %>
+        <% end %>
+    <% end %>
+  </div>
+</article>

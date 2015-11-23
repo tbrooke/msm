@@ -3,51 +3,63 @@
 
 <hr>
 <ul class="bullets">
-  <% @features.each do |feature| %>
-      <%= cell(:feature, feature) %>
-  <% end %>
+  <li class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-1">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
+    </div>
+    <div class="bullet-content">
+       <h2>  <%= link_to "News", '/news'  %>  </h2>
+      <% @news.first(3).each do |article| %>
+          <% if cell(:news, article) %>
+              <div class="link-title">
+                <%= cell(:news, article).(:link)  %>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+  </li>
+  <li class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-1">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
+    </div>
+    <div class="bullet-content">
+      <h2>    <%= link_to "Projects", '/project'  %>  </h2>
+      <% @projects.first(3).each do |article| %>
+          <% if cell(:project, article) %>
+              <div class="link-title">
+                <%= cell(:project, article).(:link)  %>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+  </li>
+  <li class="bullet three-col-bullet">
+    <div class="bullet-icon bullet-icon-1">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_4.png" alt="">
+    </div>
+    <div class="bullet-content">
+      <h2>    <%= link_to "Events", '/event'  %>  </h2>
+      <% @events.each do |article| %>
+          <% if cell(:event, article) %>
+              <div class="link-title">
+                <%= cell(:event, article).(:link)  %>
+              </div>
+          <% end %>
+      <% end %>
+    </div>
+  </li>
 </ul>
-
-<hr>
+<hr />
 
 <div class="scroll-on-page">
-  <aside>
-    <article>
-        <div class="grid-items">
-          <h3>Current News</h3>
-          <hr>
-          <% @news.each do |article| %>
-            <% if cell(:news, article).call %>
-                <section>
-                  <%= cell(:news, article).call %>
-                </section>
-            <% end %>
-          <% end %>
-        </div>
-    </article>
-  </aside>
 
-  <article class="main-body">
+
     <section>
-      <h4 id="scroll-link-1"></h4>
-      <% if @main_1 %>
-      <%= @main_1.as_html_safe(link_resolver())%>
-  <% end %>
-  </section>
-  <section class="main-title">
-    <h4 id="scroll-link-2"></h4>
-    <% if @main_2 %>
-        <%= @main_2.as_html_safe(link_resolver()) %>
-        <hr>
-    <% end %>
-  </section>
-  <section>
-    <% if @main_3 %>
-        <h4 id="scroll-link-3"></h4>
-        <%= @main_3.as_html_safe(link_resolver()) %>
-    <% end %>
-  </section>
-  <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
-  </article>
+      <% @main.each do |item| %>
+          <%= cell(:main, item).call %>
+      <% end %>
+
+      </section>
+    <a class="scroll-on-page-link" href="#scroll-on-page-top">Back to top</a>
 </div>
 

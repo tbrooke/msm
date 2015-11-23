@@ -13,25 +13,29 @@ class ApplicationController < ActionController::Base
   #
 
   def index
-    # @document = PrismicService.get_document(api.bookmark("heading"), api, ref)
     @features =  api.form("features")
                     .orderings("[my.feature.position]")
                     .submit(ref)
-    @sliders  = api.form('slider').submit(ref)
-    @main_1 = PrismicService.get_document(api.bookmark('main_1'), api, ref)
-    @main_2 = PrismicService.get_document(api.bookmark('main_2'), api, ref)
-    @main_3 = PrismicService.get_document(api.bookmark('main_3'), api, ref)
+    @sliders   = api.form('slider').submit(ref)
+    # @main_1  = PrismicService.get_document(api.bookmark('main_1'), api, ref)
+    # @main_2  = PrismicService.get_document(api.bookmark('main_2'), api, ref)
+    # @main_3  = PrismicService.get_document(api.bookmark('main_3'), api, ref)
+    @main      = api.form('main').submit(ref)
     @google_id = api.experiments.current
-    @articles = api.form("articles")
+    @articles  = api.form("articles")
                      .page(params[:page] ? params[:page] : '1')
                      .page_size(params[:page_size] ? params[:page_size] : '3')
                     .submit(ref)
-    @news = api.form('news')
+    @news      = api.form('news')
                     .page(params[:page] ? params[:page] : '1')
                     .page_size(params[:page_size] ? params[:page_size] : '3')
                     .submit(ref)
-  end
+    @projects  = api.form("projects")
+                    .submit(ref)
+    @events    = api.form("events")
+                    .submit(ref)
 
+  end
 
   def community
     @document = PrismicService.get_document(api.bookmark("community"), api, ref)
@@ -43,7 +47,7 @@ class ApplicationController < ActionController::Base
   end
 
   def neighbors
-    @document = PrismicService.get_document(api.bookmark("community"), api, ref)
+    @document = PrismicService.get_document(api.bookmark("neighbors"), api, ref)
     @google_id = api.experiments.current
   end
 
@@ -68,6 +72,20 @@ class ApplicationController < ActionController::Base
     @news = api.form("news")
                 .submit(ref)
   end
+
+  def event
+    @google_id = api.experiments.current
+    @events = api.form("events")
+                .submit(ref)
+  end
+
+  def project
+    @google_id = api.experiments.current
+    @projects = api.form("projects")
+                  .submit(ref)
+  end
+
+
 
 
   def volunteer
