@@ -34,6 +34,18 @@ $max-width: em(1100);
 }
 
 
+html, body {
+  overflow-x: hidden;
+}
+
+.full-width-bar {
+  margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
 body {
   @include outer-container;
   font-family: "charterregular", serif;
@@ -218,14 +230,15 @@ aside {
 }
 
 .main-body-homepage {
-  @include span-columns(12);
-  margin: 40px;
+  @include span-columns(11);
   border-bottom: inset;
+  margin: 40px;
 }
 
 .main-body-text {
   @include span-columns(8);
   float: right;
+  margin-right: 2em;
   h1 {
     text-align: center;
     font-size: 1.5em;
@@ -233,7 +246,7 @@ aside {
 }
 
 .main-illustration {
-  @include span-columns(3);
+  @include span-columns(4);
   foat: left;
 }
 
