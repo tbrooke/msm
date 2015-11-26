@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
   end
 
   def bridges
-    @document = PrismicService.get_document(api.bookmark("community"), api, ref)
+    @document = PrismicService.get_document(api.bookmark("bridges"), api, ref)
     @google_id = api.experiments.current
   end
 

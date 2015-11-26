@@ -188,7 +188,7 @@ iframe {
 }
 
 .main-body {
-  margin: 20px;
+  margin: 80px;
   h1,h2,h3 {
     text-align: center;
   }
@@ -235,6 +235,10 @@ aside {
   margin: 40px;
 }
 
+.donation {
+  margin-left: 80px;
+}
+
 .main-body-text {
   @include span-columns(8);
   float: right;
@@ -256,6 +260,12 @@ section[data-field="illustration"] {
   float: left;
   margin: 10px;
 }
+
+section[data-field="content"] {
+  margin: 60px;
+}
+
+
 
 article {
   ///////////////////////////////////////////////////////////////////////////////////
@@ -285,6 +295,7 @@ article {
     color: $base-font-color;
     line-height: $base-line-height;
   }
+
 
   a {
     color: $base-link-color;
