@@ -8,7 +8,7 @@
     "#{@documents.total_results_size} documents found"
   end
 %></h1>
-
+<article class="search"
 <ul>
   <% @documents.each do |doc| %>
     <li>
@@ -21,7 +21,7 @@
     </li>
   <% end %>
 </ul>
-
+</article>
 <hr>
 
 <%= paginate @documents %>

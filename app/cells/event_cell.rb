@@ -28,7 +28,14 @@ class EventCell < Cell::ViewModel
       model['main.reference'].as_html_safe(link_resolver())
     end
   end
-  def lede
+
+  def catcher
+    if model['main.catcher']
+      model['main.catcher']
+    end
+  end
+
+  def description
     if model['event.longlede']
       model['event.longlede'].as_html_safe(link_resolver())
     end

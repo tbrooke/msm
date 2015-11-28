@@ -239,6 +239,9 @@ aside {
   margin-left: 80px;
 }
 
+.search {
+  margin-left: 80px;
+}
 .main-body-text {
   @include span-columns(8);
   float: right;
@@ -247,6 +250,11 @@ aside {
     text-align: center;
     font-size: 1.5em;
   }
+}
+
+.main-body-7 {
+@include span-columns(7);
+  float: right;
 }
 
 .main-illustration {
