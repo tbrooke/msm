@@ -9,7 +9,7 @@ module PrismicHelper
     @link_resolver ||= Prismic::LinkResolver.new(nil) {|doc|
       document_path(id: doc.id, slug: doc.slug)
       # maybe_ref is not expected by document path, so it appends a ?ref=maybe_ref to the URL;
-      # since maybe_ref is nil when on master ref, it appends nothing.
+      #  Tsince maybe_ref is nil when on master ref, it appends nothing.
       # You should do the same for every path method used here in the link_resolver and elsewhere in your app,
       # so links propagate the ref id when you're previewing future content releases.
     }

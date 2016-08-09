@@ -27,9 +27,16 @@ class MainCell < Cell::ViewModel
     end
   end
 
+  def content
+    if model['main.content']
+      model['main.content'].as_html_safe(link_resolver())
+    end
+    
+  end
+
   def link
     if model['main.reference']
-       model['main.reference'].as_html_safe(link_resolver())
+       model['main.reference'].url(link_resolver())
     end
   end
 

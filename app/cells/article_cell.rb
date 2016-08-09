@@ -21,13 +21,13 @@ class ArticleCell < Cell::ViewModel
     link_to title, link_resolver().link_to(model) 
   end
 
-   def lede
-     if model['article.longlede']
-     model['article.longlede'].as_html_safe(link_resolver())
-     end
-   end
+   # def lede
+   #   if model['article.longlede']
+   #   model['article.longlede'].as_html_safe(link_resolver())
+   #   end
+   # end
   
    def content
-
+     model['article.content'].as_html_safe(link_resolver())
    end
 end
