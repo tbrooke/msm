@@ -37,6 +37,10 @@ StarterRubyRails::Application.routes.draw do
 
   get '/donate', to: 'application#donate', as: :donate
 
+  ## pledge
+  
+  get '/pledge', to: 'application#pledge', as: :pledge
+
   ## helping
 
   get '/helping', to: 'application#helping', as: :helping

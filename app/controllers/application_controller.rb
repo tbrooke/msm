@@ -61,6 +61,11 @@ class ApplicationController < ActionController::Base
     @google_id = api.experiments.current
   end
 
+  def pledge
+    @document = PrismicService.get_document(api.bookmark("pledge"), api, ref)
+    @google_id = api.experiments.current
+  end
+
   def need
     @document = PrismicService.get_document(api.bookmark("need"), api, ref)
     @google_id = api.experiments.current
