@@ -2,6 +2,16 @@
   width: (100% / 12) * $columns;
 }
 
+//
+//@mixin clearfix {
+//  &::after {
+//    clear: both;
+//    content: "";
+//    display: table;
+//  }
+//}
+
+
 
 @mixin grid-item-columns-aside($columns) {
   width: (100% / 3) * $columns;
@@ -40,9 +50,6 @@
     text-decoration: none;
     width: 100%;
 
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-columns);
-    }
 
     &:focus,
     &:hover {
@@ -90,19 +97,10 @@
     color: transparentize($grid-item-color, 0.4);
     line-height: 1.5em;
 
-    @include media($medium-screen) {
-      max-width: 70%;
-    }
   }
 
   .grid-item-big {
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-big-columns);
-    }
     p {
-      @include media($medium-screen) {
-        max-width: 60%;
-      }
     }
   }
 

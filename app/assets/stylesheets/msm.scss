@@ -47,7 +47,6 @@ html, body {
 
 
 body {
-  @include outer-container;
   font-family: "charterregular", serif;
   margin: 0px;
   font-size: 1.25em;
@@ -233,20 +232,20 @@ fieldset {
 }
 
 aside {
-  @include span-columns(3);
+  //@include span-columns(3);
   float: left;
   margin: 20px;
   .wide-aside {
-    @include span-columns(5);
+    //@include span-columns(5);
   }
 }
 
 .scroll-on-page {
-  @include span-columns(12)
+  //@include span-columns(12)
 }
 
 .main-body-homepage {
-  @include span-columns(11);
+  //@include span-columns(11);
   border-bottom: inset;
   margin: 40px;
 }
@@ -259,7 +258,7 @@ aside {
   margin-left: 80px;
 }
 .main-body-text {
-  @include span-columns(8);
+  //@include span-columns(8);
   float: right;
   margin-right: 2em;
   h1 {
@@ -269,12 +268,12 @@ aside {
 }
 
 .main-body-7 {
-@include span-columns(7);
+//@include span-columns(7);
   float: right;
 }
 
 .main-illustration {
-  @include span-columns(4);
+  //@include span-columns(4);
   foat: left;
 }
 

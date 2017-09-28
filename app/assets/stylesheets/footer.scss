@@ -37,13 +37,8 @@
     margin: 0 auto;
     text-align: center;
     padding-left: 1em;
-    @include span-columns(4);
+    //@include span-columns(4);
 
-    @include media($large-screen) {
-      float: left;
-      margin-top: 25 px;
-      margin-bottom: 0;
-    }
   }
 
   #address-block {
@@ -52,7 +47,7 @@
     line-height: 1em;
     float: left;
     margin: 0;
-    @include span-columns(4);
+    //@include span-columns(4);
   }
 
 
@@ -70,7 +65,7 @@
     margin-right: 20px;
     float: right;
     text-align: right;
-    @include span-columns(10);
+    //@include span-columns(10);
   }
 
   .footer-logo img {
@@ -85,21 +80,12 @@
 
     font-size: 1.25em;
 
-    @include media($large-screen) {
-      float: left;
-      line-height: 1.8em;
-      margin-left: 1em;
-    }
   }
 
   ul li {
     font-weight: 800;
     padding-right: 1em;
 
-    @include media($large-screen) {
-      display: inline;
-      text-align: left;
-    }
   }
 
   ul li a {
@@ -112,7 +98,7 @@
   }
 
   .footer-secondary-links {
-    @include span-columns(4);
+    //@include span-columns(4);
     margin-right: 10px;
     float: right;
     text-align: right;
@@ -125,11 +111,6 @@
 
     ul.footer-social {
 
-      @include media($large-screen) {
-        float: right;
-        margin-top: 0;
-        margin-right: 40px;
-      }
 
       li {
         font-size: 1em;
