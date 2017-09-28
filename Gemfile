@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.1.9'
 gem 'rack', '1.5.2'
 
 # Use SCSS for stylesheets
@@ -11,9 +11,18 @@ gem 'neat'
 gem 'font-awesome-sass'
 
 #  Add Cells and Roar-rails
-gem "trailblazer-rails"
-gem 'cells', :git => 'https://github.com/apotonick/cells.git'
+# gem "trailblazer-rails"
+# gem 'cells', :git => 'https://github.com/apotonick/cells.git'
+# gem 'cells-erb'
+
+gem 'trailblazer-cells'
+
+gem 'cells-rails'
+
 gem 'cells-erb'
+
+
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
