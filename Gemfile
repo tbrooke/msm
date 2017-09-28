@@ -24,7 +24,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'flexslider'
 
 # gem 'therubyracer', platforms: :ruby
-gem 'json', '1.8.2'
+gem 'json'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,9 +33,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+# gem 'jbuilder', '~> 1.2'
 
-gem 'yajl-ruby', require: 'yajl'
+# gem 'yajl-ruby', require: 'yajl'
 
 gem 'prismic.io', require: 'prismic'
 
